@@ -57,7 +57,8 @@ public class aboutme extends Activity implements AdapterView.OnItemClickListener
                 case 1:
                     String[] strs = new String[p2.size()];
                         for(int j = 0;j<p2.size();j++){
-                            strs[j] = p2.get(j).getName();
+                            strs[j] = "No"+j + "    " + p2.get(j).getName()+"  "+p2.get(j).getParkId()
+                                    +"号停车场\n"+p2.get(j).getDate().toString();
                         }
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>
                             (this,android.R.layout.simple_expandable_list_item_1,strs);
