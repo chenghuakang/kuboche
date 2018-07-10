@@ -41,18 +41,15 @@ public class aboutme extends Activity implements AdapterView.OnItemClickListener
         switch((int)l){
             case 0:
                 break;
-
                 case 1:
 
                     String[] strs = {"name" + p3.getName(),"date"+ p3.getDate().toString(),"payment" + p3.getPayment(),"ga","sadfa","fasuio"};
-                    //创建ArrayAdapter
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>
                             (this,android.R.layout.simple_expandable_list_item_1,strs);
                     listView.setAdapter(adapter);
                     break;
             case 2:
                 break;
-
                 case 3:
                     break;
             case 4:
