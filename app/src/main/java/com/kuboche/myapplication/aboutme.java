@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.kuboche.bean.PackRecord;
+import com.kuboche.bean.User;
+import com.kuboche.bean.UserTest;
 
 import java.util.Date;
 import java.util.List;
@@ -27,6 +29,7 @@ public class aboutme extends Activity implements AdapterView.OnItemClickListener
         listView = (ListView) findViewById(R.id.list_view);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
+
     }
     public String[] add(String[] strs, String str){
         String[] s =  new String[strs.length+1];
@@ -53,16 +56,21 @@ public class aboutme extends Activity implements AdapterView.OnItemClickListener
 
         switch((int)l){
             case 0:
+                User us = User.findById(User.class,0);
+                String[] strs1 = {"账号： "+us.getAccount().toString(),"\n"+us.getNickname().toString()};
+                ArrayAdapter<String> adapter1 = new ArrayAdapter<String>
+                        (this,android.R.layout.simple_expandable_list_item_1,strs1);
+                listView.setAdapter(adapter1);
                 break;
                 case 1:
-                    String[] strs = new String[p2.size()];
+                    String[] strs2 = new String[p2.size()];
                         for(int j = 0;j<p2.size();j++){
-                            strs[j] = "No"+j + "    " + p2.get(j).getName()+"  "+p2.get(j).getParkId()
+                            strs2[j] = "No"+j + "    " + p2.get(j).getName()+"  "+p2.get(j).getParkId()
                                     +"号停车场\n"+p2.get(j).getDate().toString();
                         }
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                            (this,android.R.layout.simple_expandable_list_item_1,strs);
-                    listView.setAdapter(adapter);
+                    ArrayAdapter<String> adapter2 = new ArrayAdapter<String>
+                            (this,android.R.layout.simple_expandable_list_item_1,strs2);
+                    listView.setAdapter(adapter2);
                     break;
             case 2:
                 break;

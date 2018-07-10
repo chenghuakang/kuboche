@@ -21,14 +21,46 @@ public class User extends SugarRecord implements Serializable {
         this.securityQuestion=securityQuestion;
         this.securityAnswer=securityAnswer;
     }
-}
+    public User(){}
 
-class UserTest {
-    public static void main(String[] args) {
+    public String getAccount() {
+        return account;
+    }
 
+    public void setAccount(String account) {
+        this.account = account;
+    }
 
-        User U1;
-        U1 = new User("18171370371", "可可", "123456", "爸爸的生日", "8月7日");
+    public String getPassword() {
+        return password;
+    }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public String getSecurityAnswer() {
+        return securityAnswer;
+    }
+
+    public String getSecurityQuestion() {
+        return securityQuestion;
+    }
+
+    public void setSecurityAnswer(String securityAnswer) {
+        this.securityAnswer = securityAnswer;
+    }
+
+    public void setSecurityQuestion(String securityQuestion) {
+        this.securityQuestion = securityQuestion;
     }
 }
+
