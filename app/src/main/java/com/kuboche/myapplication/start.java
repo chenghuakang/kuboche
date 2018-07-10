@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import java.time.Instant;
 
@@ -27,13 +28,20 @@ public class start extends Activity {
     }
     public void signIn(View v){
         Intent i =new Intent();
-        i.setClassName(getApplicationContext(),"com.kuboche.myapplication.signin");
-        startActivity(i);
+        if(passwordIsRight("password","password")) {
+            i.setClassName(getApplicationContext(), "com.kuboche.myapplication.signin");
+            startActivity(i);
+        }
+        else{
+            Toast.makeText(this,"密码错误",Toast.LENGTH_LONG).show();
+        }
     }
     public void password1(View v){
         Intent i =new Intent();
         i.setClassName(getApplicationContext(),"com.kuboche.myapplication.change_password1");
         startActivity(i);
     }
-
+    private boolean passwordIsRight(String password1,String password2){
+        return password1.equals(password2);
+    }
 }
