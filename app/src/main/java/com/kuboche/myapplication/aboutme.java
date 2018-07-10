@@ -28,12 +28,25 @@ public class aboutme extends Activity implements AdapterView.OnItemClickListener
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
     }
-
+    public String[] add(String[] strs, String str){
+        String[] s =  new String[strs.length+1];
+         int i = 0;
+        for(String ax:strs){
+            s[i] = ax;
+            i++;
+        }
+        s[i] = str;
+        return s;
+    }
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         PackRecord p =  new PackRecord(49,"njnsajdk",6.646,new Date());
         p.save();
         p=new PackRecord(55,"FASHUIk",8.136,new Date());
+        p.save();
+        p=new PackRecord(79,"FASHUIk",8.136,new Date());
+        p.save();
+        p=new PackRecord(321,"FASHUIk",8.136,new Date());
         p.save();
         PackRecord p3 = PackRecord.findById(PackRecord.class,1);
         List<PackRecord> p2 = PackRecord.listAll(PackRecord.class);
@@ -42,8 +55,10 @@ public class aboutme extends Activity implements AdapterView.OnItemClickListener
             case 0:
                 break;
                 case 1:
-
-                    String[] strs = {"name" + p3.getName(),"date"+ p3.getDate().toString(),"payment" + p3.getPayment(),"ga","sadfa","fasuio"};
+                    String[] strs = new String[p2.size()];
+                        for(int j = 0;j<p2.size();j++){
+                            strs[j] = p2.get(j).getName();
+                        }
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>
                             (this,android.R.layout.simple_expandable_list_item_1,strs);
                     listView.setAdapter(adapter);
