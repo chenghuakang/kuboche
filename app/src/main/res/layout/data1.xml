@@ -18,7 +18,7 @@
             android:layout_gravity="center"
             android:textColor="#ffffff"
             android:text="@string/onekey"
-
+            android:onClick="findPark"
             android:textSize="50sp" />
     </LinearLayout>
 

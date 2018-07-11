@@ -22,7 +22,7 @@ public class start extends Activity {
 
     public void logIn(View v){
         Intent i = new Intent();
-        if(passwordIsRight("password","password1")) {
+        if(passwordIsRight("password","password")) {
         i.setClassName(getApplicationContext(),"com.kuboche.myapplication.framework");
         startActivity(i);
         /*setContentView(R.layout.framework);*/
