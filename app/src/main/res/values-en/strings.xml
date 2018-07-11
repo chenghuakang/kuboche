@@ -7,36 +7,36 @@
     <string name="hint2">password</string>
     <string name="logIn">log in</string>
     <string name="signIn">sign in</string>
-    <string name="changePassword">forget password</string>
-    <string name="framework1">停车</string>
-    <string name="framework2">潘多拉魔盒</string>
-    <string name="framework3">个人</string>
+    <string name="changePassword">FORGET PASSWORD?</string>
+    <string name="framework1">parking</string>
+    <string name="framework2">pandora box</string>
+    <string name="framework3">person</string>
     <!-- splash -->
-    <string name="onekey">一键/n找车位</string>
+    <string name="onekey">find \n station</string>
 
     <!-- signin -->
-    <string name="account">请输入手机号</string>
-    <string name="password">请输入密码</string>
-    <string name="re_password">确认密码</string>
-    <string name="signin">登录</string>
-    <string name="set_answer">请设置答案</string>
-    <string name="spin_title">请设置密保问题</string>
+    <string name="account">Your Phone</string>
+    <string name="password">Your Password</string>
+    <string name="re_password">Repeat Password</string>
+    <string name="signin">sign in</string>
+    <string name="set_answer">Your Answer</string>
+    <string name="spin_title">Security Question</string>
 
     <!-- change_password1 -->
-    <string name="submit">提交</string>
-    <string name="answer">请输入答案</string>
+    <string name="submit">submit</string>
+    <string name="answer">input your answer</string>
 
     <!-- change_password2 -->
-    <string name="new_password">请输入新密码</string>
-    <string name="confirm_password">确认密码</string>
+    <string name="new_password">new password</string>
+    <string name="confirm_password">repeat</string>
 
     <string-array name="question">
-        <item>请设置密保问题</item>
-        <item>爱人的生日</item>
-        <item>妈妈的生日</item>
-        <item>爸爸的生日</item>
-        <item>女儿的生日</item>
-        <item>儿子的生日</item>
+        <item>Security Question</item>
+        <item>lover's birthday</item>
+        <item>mother's birthday</item>
+        <item>father's birthday</item>
+        <item>daughter's birthday</item>
+        <item>son's birthday</item>
     </string-array>
 
     <!-- pandora-->
@@ -48,5 +48,5 @@
     距离：10km
     \n平均消费水平：1000</string>
     <!--about me-->
-    <string name="aboutme_btn1">我的账户信息</string>
+    <string name="aboutme_btn1">account information</string>
 </resources>
