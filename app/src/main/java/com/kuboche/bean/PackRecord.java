@@ -10,11 +10,11 @@ import java.util.Date;
 public class PackRecord extends SugarRecord implements Serializable {
     private String name;
     private Date date;
-    private int parkId;
+    private String parkId;
     private Double payment;
 
     public PackRecord(){}
-    public PackRecord(int parkId,String name,Double payment,Date date){
+    public PackRecord(String parkId,String name,Double payment,Date date){
         this.date = date;
         this.name = name;
         this.parkId = parkId;
@@ -25,7 +25,7 @@ public class PackRecord extends SugarRecord implements Serializable {
     }
 
 
-    public int getParkId() {
+    public String getParkId() {
         return parkId;
     }
 
@@ -45,7 +45,7 @@ public class PackRecord extends SugarRecord implements Serializable {
         this.name = name;
     }
 
-    public void setParkId(int parkId) {
+    public void setParkId(String parkId) {
         this.parkId = parkId;
     }
 

@@ -32,7 +32,8 @@
             android:clickable="true"
             android:text="@string/Button1"
             android:textColor="#303f9f"
-            android:textSize="24dp" />
+            android:textSize="24dp"
+            android:onClick="changeLanguage"/>
 
         <View
             android:layout_width="wrap_content"

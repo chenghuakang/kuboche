@@ -43,13 +43,13 @@ public class aboutme extends Activity implements AdapterView.OnItemClickListener
     }
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        PackRecord p =  new PackRecord(49,"njnsajdk",6.646,new Date());
+        PackRecord p =  new PackRecord("49","njnsajdk",6.646,new Date());
         p.save();
-        p=new PackRecord(55,"FASHUIk",8.136,new Date());
+        p=new PackRecord("55","FASHUIk",8.136,new Date());
         p.save();
-        p=new PackRecord(79,"FASHUIk",8.136,new Date());
+        p=new PackRecord("79","FASHUIk",8.136,new Date());
         p.save();
-        p=new PackRecord(321,"FASHUIk",8.136,new Date());
+        p=new PackRecord("321","FASHUIk",8.136,new Date());
         p.save();
         PackRecord p3 = PackRecord.findById(PackRecord.class,1);
         List<PackRecord> p2 = PackRecord.listAll(PackRecord.class);

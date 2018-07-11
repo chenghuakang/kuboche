@@ -7,11 +7,11 @@ import java.io.Serializable;
 
 @Table
 public class User extends SugarRecord implements Serializable {
-    String account;
-    String nickname;
-    String password;
-    String securityQuestion;
-    String securityAnswer;
+    private String account;
+    private String nickname;
+    private String password;
+    private String securityQuestion;
+    private String securityAnswer;
 
 
     public User(String account,String nickname,String password,String securityQuestion,String securityAnswer){
