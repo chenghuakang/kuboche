@@ -1,10 +1,10 @@
 <resources>
     <!-- start -->
     <string name="app_name">kuboche</string>
-    <string name="language">english · </string>
+    <string name="language">中文 · </string>
     <string name="Button1"> change</string>
-    <string name="hint1">please input username</string>
-    <string name="hint2">please input password</string>
+    <string name="hint1">username</string>
+    <string name="hint2">password</string>
     <string name="logIn">log in</string>
     <string name="signIn">sign in</string>
     <string name="changePassword">forget password</string>
