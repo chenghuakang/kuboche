@@ -22,19 +22,19 @@ public class start extends Activity {
 
     public void logIn(View v){
         Intent i = new Intent();
+        if(passwordIsRight("password","password1")) {
         i.setClassName(getApplicationContext(),"com.kuboche.myapplication.framework");
         startActivity(i);
         /*setContentView(R.layout.framework);*/
-    }
-    public void signIn(View v){
-        Intent i =new Intent();
-        if(passwordIsRight("password","password")) {
-            i.setClassName(getApplicationContext(), "com.kuboche.myapplication.signin");
-            startActivity(i);
         }
         else{
             Toast.makeText(this,"密码错误",Toast.LENGTH_LONG).show();
         }
+    }
+    public void signIn(View v){
+        Intent i =new Intent();
+        i.setClassName(getApplicationContext(), "com.kuboche.myapplication.signin");
+        startActivity(i);
     }
     public void password1(View v){
         Intent i =new Intent();
