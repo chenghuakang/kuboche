@@ -40,13 +40,13 @@
     </string-array>
 
     <!-- pandora-->
-    <string name="pandora_btn1">车位租赁</string>
-    <string name="pandora_btn2">汽车服务中心</string>
-    <string name="pandora_btn3">活动中心</string>
-    <string name="parking_renting">车位租赁信息</string>
-    <string name="automotive_service1">名称：汽车服务中心\n位置：XXXX\n
-    距离：10km
-    \n平均消费水平：1000</string>
+    <string name="pandora_btn1">Parking lease</string>
+    <string name="pandora_btn2">Server Center</string>
+    <string name="pandora_btn3">Activity Center</string>
+    <string name="parking_renting">Parking lease Message</string>
+    <string name="automotive_service1">Name：Server Center\nLocate：XXXX\n
+    distance：10km
+    \nAverage Consumption Level：1000</string>
     <!--about me-->
     <string name="aboutme_btn1">account information</string>
 </resources>
