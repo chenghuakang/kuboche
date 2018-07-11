@@ -51,7 +51,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:hint="@string/hint1"
-        android:textSize="32dp" />
+        android:textSize="32dp"
+        android:id="@+id/account"/>
 
     <EditText
         android:layout_width="320dp"
@@ -59,7 +60,8 @@
         android:layout_gravity="center_horizontal"
         android:hint="@string/hint2"
         android:inputType="textPassword"
-        android:textSize="32dp" />
+        android:textSize="32dp"
+        android:id="@+id/password"/>
 
     <Button
         android:layout_width="240dp"
