@@ -2,11 +2,15 @@ package com.kuboche.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Toast;
 
 import java.time.Instant;
+import java.util.Locale;
 
 public class start extends Activity {
     @Override
@@ -45,6 +49,23 @@ public class start extends Activity {
         return password1.equals(password2);
     }
     public void changeLanguage(View v){
+        Resources r= getBaseContext().getResources();
+        DisplayMetrics DM=r.getDisplayMetrics();
+        Configuration config = r.getConfiguration();
+        if(config.locale == Locale.ENGLISH){
+        config.locale= Locale.CHINESE;
+        r.updateConfiguration(config,DM);
+        Intent i =new Intent();
+        i.setClassName(getApplicationContext(),"com.kuboche.myapplication.start");
+        startActivity(i);
+        }
+        else {
+            config.locale= Locale.ENGLISH;
+            r.updateConfiguration(config,DM);
+            Intent i =new Intent();
+            i.setClassName(getApplicationContext(),"com.kuboche.myapplication.start");
+            startActivity(i);
+        }
 
     }
 }

@@ -9,7 +9,6 @@ import android.widget.ListView;
 
 import com.kuboche.bean.PackRecord;
 import com.kuboche.bean.User;
-import com.kuboche.bean.UserTest;
 
 import java.util.Date;
 import java.util.List;
