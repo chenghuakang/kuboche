@@ -24,7 +24,7 @@ public class pandora1 extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pandora1);
-
+        main();
         List<pandora1DS> carRentlist = pandora1DS.listAll(pandora1DS.class);//这行出的错
         String str[] = new String[carRentlist.size()];
         for(int i = 0; i < carRentlist.size();i++){

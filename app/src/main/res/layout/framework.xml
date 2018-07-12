@@ -44,7 +44,7 @@
                 android:drawableTop="@drawable/btn_1find"
                 android:onClick="loan"
                 android:id="@+id/fragment1"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="8dp"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                 android:text="@string/framework2"
                 android:drawableTop="@drawable/btn_2box"
                 android:onClick="pandora"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="8dp"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                 android:text="@string/framework3"
                 android:drawableTop="@drawable/btn_3info"
                 android:onClick="about_me"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="8dp"/>
         </LinearLayout>
 
 
