@@ -48,7 +48,7 @@ public class signin extends Activity {
         //获取输入的账号
         EditText editText1 = (EditText) findViewById(R.id.account);
         String account = editText1.getText().toString();
-        Pattern p1 = Pattern.compile("\"^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\\\\d{8}$\"");
+        Pattern p1 = Pattern.compile("(13|14|15|17|18|19)[0-9]{9}");
         Matcher m1 = p1.matcher(account);
         if(m1.matches()) {
             //获取输入的密码
