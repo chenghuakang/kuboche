@@ -9,6 +9,9 @@
         android:layout_height="120dp"
         android:background="@drawable/pan1"
         android:layout_margin="30dp"
+        android:text="@string/pandora_btn1"
+        android:textSize="40sp"
+        android:textColor="#ffffff"
         android:id="@+id/pandora_btn1"/>     <!--格式控制-->
     <Button
         android:layout_width="match_parent"
@@ -16,12 +19,18 @@
         android:background="@drawable/pan2"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:text="@string/pandora_btn2"
+        android:textSize="40sp"
+        android:textColor="#ffffff"
         android:id="@+id/pandora_btn2"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="@drawable/pan3"
         android:layout_margin="30dp"
+        android:text="@string/pandora_btn3"
+        android:textSize="40sp"
+        android:textColor="#ffffff"
         android:id="@+id/pandora_btn3"/>
     
     <View

@@ -47,7 +47,7 @@
 
     <!-- pandora-->
     <string name="pandora_btn1">车位租赁</string>
-    <string name="pandora_btn2">汽车服务中心</string>
+    <string name="pandora_btn2">汽车服务</string>
     <string name="pandora_btn3">活动中心</string>
     <string name="parking_renting">车位租赁信息</string>
     <string name="automotive_service1">名称：汽车服务中心\n位置：XXXX\n
@@ -57,4 +57,5 @@
     <string name="aboutme_btn1">我的账户信息</string>
     <string name="securityAnswer">请输入密保答案</string>
     <string name="toast1">请先注册</string>
+    <string name="toast2">账号不存在</string>
 </resources>

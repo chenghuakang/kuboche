@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
-        android:src="@drawable/head3"
+        android:src="@drawable/head2"
         android:adjustViewBounds="true"/>
 
     <LinearLayout

@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.kuboche.bean.PackRecord;
 import com.kuboche.bean.User;
@@ -55,11 +56,16 @@ public class aboutme extends Activity implements AdapterView.OnItemClickListener
 
         switch((int)l){
             case 0:
-                User us = User.findById(User.class,0);
-                String[] strs1 = {"账号： "+us.getAccount().toString(),"\n"+us.getNickname().toString()};
+                List<User> us = User.listAll(User.class);
+                if(!us.isEmpty()){
+                    User us1 = us.get(0);
+                String[] strs1 = {"账号： "+us1.getAccount().toString(),"\n"+us1.getNickname().toString()};
                 ArrayAdapter<String> adapter1 = new ArrayAdapter<String>
                         (this,android.R.layout.simple_expandable_list_item_1,strs1);
-                listView.setAdapter(adapter1);
+                listView.setAdapter(adapter1);}
+                else {
+                    Toast.makeText(this, "账号不存在", Toast.LENGTH_LONG).show();
+                }
                 break;
                 case 1:
                     String[] strs2 = new String[p2.size()];
