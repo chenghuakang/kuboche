@@ -18,6 +18,8 @@ import com.kuboche.bean.User;
 
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class signin extends Activity {
     @Override
@@ -46,32 +48,44 @@ public class signin extends Activity {
         //获取输入的账号
         EditText editText1 = (EditText) findViewById(R.id.account);
         String account = editText1.getText().toString();
-        //获取输入的密码
-        EditText editText2 = (EditText) findViewById(R.id.pwd1);
-        String pwd1 = editText2.getText().toString();
-        //获取确认的密码
-        EditText editText3 = (EditText) findViewById(R.id.pwd2);
-        String pwd2 = editText3.getText().toString();
-        //获取密保问题
-        Spinner sp = (Spinner) findViewById(R.id.securityQuestion);
-        String securityQuestion = (String) sp.getSelectedItem();
-        //获取密保答案
-        EditText editText4 = (EditText) findViewById(R.id.securityAnswer);
-        String securityAnswer = editText4.getText().toString();
+        Pattern p1 = Pattern.compile("\"^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\\\\d{8}$\"");
+        Matcher m1 = p1.matcher(account);
+        if(m1.matches()) {
+            //获取输入的密码
+            EditText editText2 = (EditText) findViewById(R.id.pwd1);
+            String pwd1 = editText2.getText().toString();
+            //获取确认的密码
+            EditText editText3 = (EditText) findViewById(R.id.pwd2);
+            String pwd2 = editText3.getText().toString();
+            //获取密保问题
+            Spinner sp = (Spinner) findViewById(R.id.securityQuestion);
+            String securityQuestion = (String) sp.getSelectedItem();
+            //获取密保答案
+            EditText editText4 = (EditText) findViewById(R.id.securityAnswer);
+            String securityAnswer = editText4.getText().toString();
 
 
-        if (accountIsExist(account)!=0 ){
-            Toast.makeText(this, "该账号已存在！", Toast.LENGTH_LONG).show();
+            if (accountIsExist(account) != 0) {
+                Toast.makeText(this, "该账号已存在！", Toast.LENGTH_LONG).show();
+            } else if (passwordIsRight(pwd1, pwd2)) {
+                Pattern p2 = Pattern.compile(".{6,10}");
+                Matcher m2 = p1.matcher(pwd1);
+                if(m2.matches()) {
+                    User U1 = new User(account, null, pwd1, securityQuestion, securityAnswer);
+                    U1.save();
+                    i.setClassName(getApplicationContext(), "com.kuboche.myapplication.framework");
+                    startActivity(i);
+                    Toast.makeText(this, "注册成功！", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(this, "密码太短或太长（6-10位）！", Toast.LENGTH_LONG).show();
+                }
+            } else {
+                Toast.makeText(this, "两次输入的密码不一致！", Toast.LENGTH_LONG).show();
+            }
         }
-        else if(passwordIsRight(pwd1, pwd2)) {
-            User U1 = new User(account, null, pwd1, securityQuestion, securityAnswer);
-            U1.save();
-            i.setClassName(getApplicationContext(), "com.kuboche.myapplication.framework");
-            startActivity(i);
-            Toast.makeText(this, "注册成功！", Toast.LENGTH_LONG).show();
-        }
-        else{
-            Toast.makeText(this, "两次输入的密码不一致！", Toast.LENGTH_LONG).show();
+        else {
+            Toast.makeText(this, "手机号码不合法！", Toast.LENGTH_LONG).show();
         }
     }
 
