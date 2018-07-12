@@ -69,7 +69,7 @@ public class signin extends Activity {
                 Toast.makeText(this, "该账号已存在！", Toast.LENGTH_LONG).show();
             } else if (passwordIsRight(pwd1, pwd2)) {
                 Pattern p2 = Pattern.compile(".{6,10}");
-                Matcher m2 = p1.matcher(pwd1);
+                Matcher m2 = p2.matcher(pwd1);
                 if(m2.matches()) {
                     User U1 = new User(account, null, pwd1, securityQuestion, securityAnswer);
                     U1.save();
