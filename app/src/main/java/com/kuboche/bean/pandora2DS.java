@@ -7,19 +7,18 @@ import com.orm.annotation.Table;
 import java.io.Serializable;
 
 @Table
-public class pandora2 extends SugarRecord implements Serializable {
+public class pandora2DS extends SugarRecord implements Serializable {
     private String name; //汽车服务中心的名字
     private String location;//位置
-    private float averageCost;//人均消费
+    private double averageCost;//人均消费
     private String contactWay;//联系方式
     private String contactPerson;//联系人
 
-    public pandora2(){}
-    public pandora2(String name,String location,float averageCost,String contactPerson,String contactWay) {
+    public pandora2DS(){}
+    public pandora2DS(String name, String location, double averageCost, String contactWay) {
         this.name = name;
         this.location = location;
         this.averageCost = averageCost;
-        this.contactPerson = contactPerson;
         this.contactWay = contactWay;
     }
 
@@ -32,12 +31,8 @@ public class pandora2 extends SugarRecord implements Serializable {
     public String getContactWay() {
         return contactWay;
     }
-
-    public String getContactPerson() {
-        return contactPerson;
-    }
-    public float getAverageCost() {
-        return averageCost;
+    public String getAverageCost() {
+        return  ""+averageCost;
     }
 
     public void setName(String name) {
@@ -56,7 +51,4 @@ public class pandora2 extends SugarRecord implements Serializable {
         this.averageCost = averageCost;
     }
 
-    public void setContactPerson(String contactPerson) {
-        this.contactPerson = contactPerson;
-    }
 }
