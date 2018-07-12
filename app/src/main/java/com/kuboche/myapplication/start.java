@@ -40,7 +40,7 @@ public class start extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
-        //main();
+        main();
 
         PackRecord p = new PackRecord("111", "njnsajdk", 6.646, new Date());
         p.save();

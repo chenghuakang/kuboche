@@ -19,15 +19,13 @@ public class pandora1 extends Activity {
         carR.save();
         carR = new pandora1DS("武汉市武昌区附近",800,"13043247890","康先生","跳楼价！");
         carR.save();
-
-
     }
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pandora1);
 
-        List<pandora1DS> carRentlist = pandora1DS.listAll(pandora1DS.class);
+        List<pandora1DS> carRentlist = pandora1DS.listAll(pandora1DS.class);//这行出的错
         String str[] = new String[carRentlist.size()];
         for(int i = 0; i < carRentlist.size();i++){
             //str[i] = "abc";

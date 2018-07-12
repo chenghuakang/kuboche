@@ -8,7 +8,8 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:gravity="center|center_horizontal|center_vertical" >
+        android:gravity="center|center_horizontal|center_vertical"
+        android:background="#7AC5CD">
         <Button
             android:id="@+id/onekey"
             android:background="@drawable/shape"
@@ -18,7 +19,7 @@
             android:layout_gravity="center"
             android:textColor="#ffffff"
             android:text="@string/onekey"
-            android:onClick="findPark"
+
             android:textSize="50sp" />
     </LinearLayout>
 

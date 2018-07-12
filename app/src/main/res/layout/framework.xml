@@ -41,7 +41,7 @@
                 android:layout_weight="1"
                 android:text="@string/framework1"
                 android:background="@android:color/transparent"
-                android:drawableTop="@drawable/icons1"
+                android:drawableTop="@drawable/btn_1find"
                 android:onClick="loan"
                 android:id="@+id/fragment1"/>
             <Button
@@ -50,7 +50,7 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="@string/framework2"
-                android:drawableTop="@drawable/icons2"
+                android:drawableTop="@drawable/btn_2box"
                 android:onClick="pandora"/>
             <Button
                 android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="@string/framework3"
-                android:drawableTop="@drawable/icons3"
+                android:drawableTop="@drawable/btn_3info"
                 android:onClick="about_me" />
         </LinearLayout>
 
