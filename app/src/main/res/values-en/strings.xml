@@ -54,4 +54,5 @@
     <!--about me-->
     <string name="aboutme_btn1">account information</string>
     <string name="securityAnswer">Please input your Security Answer</string>
+    <string name="toast1">Please Signin First</string>
 </resources>

@@ -56,4 +56,5 @@
     <!--about me-->
     <string name="aboutme_btn1">我的账户信息</string>
     <string name="securityAnswer">请输入密保答案</string>
+    <string name="toast1">请先注册</string>
 </resources>
