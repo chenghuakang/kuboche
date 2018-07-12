@@ -24,19 +24,23 @@ public class start extends Activity {
         User U1;
         U1 = new User("18171370371", "可可", "123456", "爸爸的生日", "8月7日");
         U1.save();
+        U1.delete();
         U1 = new User("18171370372", "小可可", "1234567", "爸爸的生日", "8月7日");
         U1.save();
+        U1.delete();
         U1 = new User("18171370373", "大可可", "12345678", "爸爸的生日", "8月7日");
         U1.save();
+        U1.delete();
         U1 = new User("18171370378", "大可可", "12345678", "爸爸的生日", "8月7日");
         U1.save();
+        U1.delete();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
-        main();
+        //main();
 
         PackRecord p = new PackRecord("111", "njnsajdk", 6.646, new Date());
         p.save();

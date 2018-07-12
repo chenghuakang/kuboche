@@ -1,2 +1,0 @@
-# kuboche
-##Credit by chenghuakang.

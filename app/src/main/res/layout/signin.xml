@@ -70,7 +70,7 @@
                 android:textSize="24dp"
                 />
             <Spinner
-                android:id="@+id/province"
+                android:id="@+id/securityQuestion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:prompt="@string/spin_title"
@@ -88,12 +88,12 @@
                 android:textSize="24dp"
                 />
             <EditText
-                android:id="@+id/pwd"
+                android:id="@+id/securityAnswer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="220px"
                 android:textSize="24px"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword" />
             <TextView />
         </TableRow>
 

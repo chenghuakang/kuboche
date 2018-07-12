@@ -1,4 +1,4 @@
-package com.kuboche.myapplication;
+package com.kuboche.kuboche;
 
 import org.junit.Test;
 
