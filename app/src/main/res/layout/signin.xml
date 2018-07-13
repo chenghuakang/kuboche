@@ -23,7 +23,7 @@
                 android:id="@+id/account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="24px"
+                android:textSize="24dp"
                 android:minWidth="220px"/>
             <TextView />
         </TableRow>
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="220px"
-                android:textSize="24px"
+                android:textSize="24dp"
                 android:inputType="textPassword"/>
             <TextView />
         </TableRow>
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="220px"
-                android:textSize="24px"
+                android:textSize="24dp"
                 android:inputType="textPassword"/>
             <TextView />
         </TableRow>
@@ -92,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="220px"
-                android:textSize="24px"
+                android:textSize="24dp"
                 android:inputType="textPassword" />
             <TextView />
         </TableRow>
