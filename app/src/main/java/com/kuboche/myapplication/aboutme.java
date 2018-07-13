@@ -21,7 +21,7 @@ import java.util.List;
 
 public class aboutme extends Activity implements AdapterView.OnItemClickListener{
     ListView listView;
-    boolean clickable = true;
+    ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +29,7 @@ public class aboutme extends Activity implements AdapterView.OnItemClickListener
         //要显示的数据
         String[] strs = {"我的账户","停车记录","账户信息","注销账户"};
         //创建ArrayAdapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>
+        adapter = new ArrayAdapter<String>
                 (this,android.R.layout.simple_expandable_list_item_1,strs);
         //获取ListView对象，通过调用setAdapter方法为ListView设置Adapter设置适配器
         listView = (ListView) findViewById(R.id.list_view);
@@ -49,7 +49,7 @@ public class aboutme extends Activity implements AdapterView.OnItemClickListener
     }
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        if (clickable) {
+        if (listView.getAdapter().equals(adapter)) {
             PackRecord p = new PackRecord("49", "njnsajdk", 6.646, new Date());
             p.save();
             p = new PackRecord("55", "FASHUIk", 8.136, new Date());
@@ -98,7 +98,7 @@ public class aboutme extends Activity implements AdapterView.OnItemClickListener
 
                 default:
             }
-            clickable = false;
+
         }
     }
 }
