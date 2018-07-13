@@ -25,15 +25,14 @@ public class pandora1 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pandora1);
         main();
-        List<pandora1DS> carRentlist = pandora1DS.listAll(pandora1DS.class);//这行出的错
+        List<pandora1DS> carRentlist = pandora1DS.listAll(pandora1DS.class);
         String str[] = new String[carRentlist.size()];
         for(int i = 0; i < carRentlist.size();i++){
             //str[i] = "abc";
-            str[i] =  "地理位置："+carRentlist.get(i).getLocation()+"\n简单介绍："+carRentlist.get(i).getIntroduction()+"\n联系人："
-                    +carRentlist.get(i).getContactPerson()+"\n联系方式："+carRentlist.get(i).getContactWay();
-            //str[i] = "地理位置：DASHIUWHDNCMSDLC,DSGHJKHMBNF"+ "\n简介：DASUILDJKSADNCM"+"\n联系人："+"\n联系方式:";
+            str[i] =  "位置："+carRentlist.get(i).getLocation()+"\n简介："+carRentlist.get(i).getIntroduction()+"\n联系人："
+                    +carRentlist.get(i).getContactPerson()+"\t"+carRentlist.get(i).getContactWay();
         }
-        //问题：只能放三行
+        //问题：只能放三行"ad\nas\ndfs\n"
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (this,android.R.layout.simple_expandable_list_item_1,str);
         listView = (ListView) findViewById(R.id.pan1_listview);

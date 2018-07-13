@@ -37,9 +37,6 @@ public class start extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
         main();
-
-        PackRecord p = new PackRecord("111", "njnsajdk", 6.646, new Date());
-        p.save();
     }
 
     @Override

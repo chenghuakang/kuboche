@@ -18,28 +18,30 @@ public class pandora2 extends Activity {
         carService.save();
         carService = new pandora2DS("向创汽车服务中心","武汉市武昌区",800,"18171372219");
         carService.save();
-        carService = new pandora2DS("申通汽车服务中心","河南信阳市",900,"18171372210");
+        carService = new pandora2DS("申通汽车服务中心","河南信阳市车站附近",900,"18171372210");
         carService.save();
     }
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pandora2);
-
-        List<pandora2DS> carS = pandora2DS.listAll(pandora2DS.class);
+        main();
+        List<pandora2DS> carDes = pandora2DS.listAll(pandora2DS.class);
+        /*List<pandora2DS> carS = pandora2DS.listAll(pandora2DS.class);
         List<pandora2DS> carDes = new ArrayList<pandora2DS>();
         String des = "武汉";//传进来的位置
         //搜索相关地理位置，扔进新的列表中
+
         for(int i = 0; i < carS.size(); i++){
             String str = carS.get(i).getLocation();
             if(str.indexOf(des) > 0){
                 carDes.add(carS.get(i));
             }
-        }
+        }*/
 
         String str2[] = new String[carDes.size()];
         for(int i = 0; i < carDes.size();i++){
-            str2[i] = "名称："+carDes.get(i).getName()+"\n人均消费："+carDes.get(i).getAverageCost()
+            str2[i] = carDes.get(i).getName()+"\t人均消费："+carDes.get(i).getAverageCost()
                     +"\n位置："+carDes.get(i).getLocation()+"\n联系方式："+carDes.get(i).getContactWay();
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>

@@ -26,33 +26,62 @@ public class change_password1 extends Activity {
     public void password2(View v){
         EditText editText1 = (EditText) findViewById(R.id.account1);
         account1 = editText1.getText().toString();
-        //显示用户的密保问题并显示
+        //获取用户的密保问题并显示
         List<User> userList= User.find(User.class,"account=?",account1);
-        String securityQuestion=userList.get(0).getSecurityQuestion().toString();
+        if(userList.size()==0){
+            Toast.makeText(this, "手机号不正确！", Toast.LENGTH_LONG).show();
+            setContentView(R.layout.change_password1);
+        }
+        else {
+            String securityQuestion=userList.get(0).getSecurityQuestion().toString();
+        /*
         if(securityQuestion == null){
             Toast.makeText(this, R.string.toast1, Toast.LENGTH_LONG).show();
             Intent i = new Intent();
             i.setClassName(getApplicationContext(), "com.kuboche.myapplication.signin");
             startActivity(i);
-        }
-        else{
+        }    */
             setContentView(R.layout.change_password2);
             TextView textView = (TextView) findViewById(R.id.securityQuestion);
             textView.setText(securityQuestion);
         }
     }
     public void password3(View v){
-        setContentView(R.layout.change_password3);
-    }
-    public void password4(View v){
-        EditText editText1 = (EditText) findViewById(R.id.password1);
-        account = editText1.getText().toString();
-        //获取输入的密码
-        EditText editText2 = (EditText) findViewById(R.id.password2);
-        String pwd1 = editText2.getText().toString();
-        Intent i = new Intent();
-        i.setClassName(getApplicationContext(),"com.kuboche.myapplication.framework");
-        startActivity(i);
+
+        //获取用户输入的账号
+        EditText editText2 = (EditText) findViewById(R.id.securityAnswer1);
+        String securityAnswer1;
+        securityAnswer1 = editText2.getText().toString();
+        //取出用户存在数据库里的密保答案
+        List<User> userList= User.find(User.class,"account=?",account1);
+        String securityAnswer=userList.get(0).getSecurityAnswer().toString();
+        //验证答案是否正确
+        if(securityAnswer.equals(securityAnswer1)) {
+            setContentView(R.layout.change_password3);
+        }
+        else Toast.makeText(this, "答案不正确！", Toast.LENGTH_LONG).show();
     }
 
+
+    public void password4(View v){
+        EditText editText1 = (EditText) findViewById(R.id.password1);
+        String password1 = editText1.getText().toString();
+        //获取输入的密码
+        EditText editText2 = (EditText) findViewById(R.id.password2);
+        String password2 = editText2.getText().toString();
+
+        if(password1.equals(password2)){
+            List<User> userList= User.find(User.class,"account=?",account1);
+            userList.get(0).setPassword(password1);
+            userList.get(0).save();
+            Intent i = new Intent();
+            i.setClassName(getApplicationContext(), "com.kuboche.myapplication.start");
+            startActivity(i);
+            //setContentView(R.layout.framework);
+            Toast.makeText(this, "修改密码成功！", Toast.LENGTH_LONG).show();
+        }
+    }
+
+
 }
+
