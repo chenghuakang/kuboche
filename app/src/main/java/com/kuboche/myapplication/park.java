@@ -1,19 +1,38 @@
 package com.kuboche.myapplication;
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Message;
+import android.view.View;
+
 import com.kuboche.bean.PackRecord;
 
 import java.util.Date;
 
-public class park {
+public class park extends Activity{
     Date date1;
     Date date2;
     String parkName;
     String name;
+    String message;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.park);
+    }
     public park(){
         date1 = new Date();
     }
-    public boolean start(String name,String stationName){
-        parkName = stationName;
-        this.name = name;
+    public boolean start(View v){
+        name = "康程华";
+        parkName = "马路上";
+        message = name+"要在"+parkName+"停车场停车";
+        Uri uri = Uri.parse("smsto:"+"10086");
+        Intent in = new Intent(Intent.ACTION_VIEW,uri);
+        in.putExtra("sms_body",message);
+//        intent.setType("rnd");
+        startActivity(in);
         return false;
     }
     public double end(double payPerHour){

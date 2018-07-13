@@ -12,7 +12,10 @@
     <string name="framework2">pandora box</string>
     <string name="framework3">person</string>
     <!-- splash -->
-    <string name="onekey">find \n station</string>
+    <string name="onekey">find\nstation</string>
+    <string name="result">result</string>
+    <string name="parkname">name</string>
+    <string name="parkinfo">information</string>
 
     <!-- signin -->
     <string name="account">Your Phone</string>
@@ -29,6 +32,7 @@
     <!-- change_password2 -->
     <string name="new_password">new password</string>
     <string name="confirm_password">repeat</string>
+    <string name="new_password1">Please Repeat Your Password</string>
 
     <string-array name="question">
         <item>Security Question</item>
@@ -49,4 +53,7 @@
     \nAverage Consumption Level：1000</string>
     <!--about me-->
     <string name="aboutme_btn1">account information</string>
+    <string name="securityAnswer">Please input your Security Answer</string>
+    <string name="toast1">Please Signin First</string>
+    <string name="toast2">There is no account</string>
 </resources>

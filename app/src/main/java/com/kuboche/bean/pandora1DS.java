@@ -7,20 +7,22 @@ import com.orm.annotation.Table;
 import java.io.Serializable;
 
 @Table
-public class pandora1 extends SugarRecord implements Serializable {
+public class pandora1DS extends SugarRecord implements Serializable {
     private String location;//车位位置
     private float price;//车位价格
     private String contactPerson;//联系人
     private String contactWay;//联系方式
     private String introduction;//简介
 
-    public pandora1( String location,float price,String contactWay,String contactPerson,String introduction) {
+    public pandora1DS(){};
+    public pandora1DS( String location,float price,String contactWay,String contactPerson,String introduction) {
         this.location = location;
         this.price = price;
         this.contactWay = contactWay;
         this.contactPerson = contactPerson;
         this.introduction = introduction;
     }
+
 
     public float getPrice() {
         return price;

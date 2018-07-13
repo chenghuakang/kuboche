@@ -18,25 +18,26 @@
             android:value="true" />
         <meta-data android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.kuboche.bean" />
-        <activity android:name=".Splash">
+        <activity android:name="com.kuboche.myapplication.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".framework"></activity>
-        <activity android:name=".start"></activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".change_password1"></activity>
-        <activity android:name=".change_password2"></activity>
-        <activity android:name=".signin"></activity>
-        <activity android:name=".aboutme"></activity>
-        <activity android:name=".pandora1"></activity>
-        <activity android:name=".pandora2"></activity>
-        <activity android:name=".pandora3"></activity>
-        <activity android:name=".data2"></activity>
+        <activity android:name="com.kuboche.myapplication.framework"></activity>
+        <activity android:name="com.kuboche.myapplication.start"></activity>
+        <activity android:name="com.kuboche.myapplication.MainActivity"></activity>
+        <activity android:name="com.kuboche.myapplication.change_password1"></activity>
+        <activity android:name="com.kuboche.myapplication.signin"></activity>
+        <activity android:name="com.kuboche.myapplication.aboutme"></activity>
+        <activity android:name="com.kuboche.myapplication.pandora1"></activity>
+        <activity android:name="com.kuboche.myapplication.pandora2"></activity>
+        <activity android:name="com.kuboche.myapplication.pandora3"></activity>
+        <activity android:name="com.kuboche.myapplication.data2"></activity>
+        <activity android:name="com.kuboche.myapplication.park"></activity>
 
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
 </manifest>

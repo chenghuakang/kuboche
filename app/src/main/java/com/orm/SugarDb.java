@@ -20,7 +20,7 @@ public class SugarDb extends SQLiteOpenHelper {
     private int openedConnections = 0;
 
     //Prevent instantiation
-    private SugarDb() {
+    public SugarDb() {
         super(getContext(), getDbName(), new SugarCursorFactory(ManifestHelper.isDebugEnabled()), getDatabaseVersion());
         schemaGenerator = SchemaGenerator.getInstance();
     }

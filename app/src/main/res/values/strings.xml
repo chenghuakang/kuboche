@@ -6,13 +6,16 @@
     <string name="hint1">请输入用户名</string>
     <string name="hint2">请输入密码</string>
     <string name="logIn">登陆</string>
-    <string name="signIn">新建酷博车账户</string>
+    <string name="signIn">新建酷泊车账户</string>
     <string name="changePassword">忘记密码</string>
-    <string name="framework1">停车</string>
+    <string name="framework1">找车位</string>
     <string name="framework2">潘多拉魔盒</string>
-    <string name="framework3">个人</string>
+    <string name="framework3">个人中心</string>
     <!-- splash -->
-    <string name="onekey">一键/n找车位</string>
+    <string name="onekey">一键\n找车位</string>
+    <string name="result">查找结果</string>
+    <string name="parkname">停车场</string>
+    <string name="parkinfo">详细信息</string>
 
     <!-- signin -->
     <string name="account">请输入手机号</string>
@@ -30,6 +33,9 @@
     <string name="new_password">请输入新密码</string>
     <string name="confirm_password">确认密码</string>
 
+    <!--change_password3-->
+    <string name="new_password1">请确认新密码</string>
+
     <string-array name="question">
         <item>请设置密保问题</item>
         <item>爱人的生日</item>
@@ -41,7 +47,7 @@
 
     <!-- pandora-->
     <string name="pandora_btn1">车位租赁</string>
-    <string name="pandora_btn2">汽车服务中心</string>
+    <string name="pandora_btn2">汽车服务</string>
     <string name="pandora_btn3">活动中心</string>
     <string name="parking_renting">车位租赁信息</string>
     <string name="automotive_service1">名称：汽车服务中心\n位置：XXXX\n
@@ -49,4 +55,7 @@
     \n平均消费水平：1000</string>
     <!--about me-->
     <string name="aboutme_btn1">我的账户信息</string>
+    <string name="securityAnswer">请输入密保答案</string>
+    <string name="toast1">请先注册</string>
+    <string name="toast2">账号不存在</string>
 </resources>
