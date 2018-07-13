@@ -58,7 +58,7 @@ public class data2 extends Activity implements AdapterView.OnItemClickListener{
             User us1 = us.get(0);
             Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"+"13888888888"));
             //sendIntent.setPackage("com.android.mms");
-            sendIntent.putExtra("sms_body", us1.getNickname()+"要在"+p.getParkname()+"停车"+",每小时"+p.getCharge() +"元");
+            sendIntent.putExtra("sms_body", us1.getAccount()+"要在"+p.getParkname()+"停车"+",每小时"+p.getCharge() +"元");
             startActivity(sendIntent);
         }
         else{

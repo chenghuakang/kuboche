@@ -69,7 +69,7 @@ public class aboutme extends Activity implements AdapterView.OnItemClickListener
                         List<User> us = User.listAll(User.class);
                         if (!us.isEmpty()) {
                             User us1 = us.get(0);
-                            String[] strs1 = {"账号： " + us1.getAccount(), "\n" + us1.getNickname()};
+                            String[] strs1 = {"账号： " + us1.getAccount(),"用户组：普通"};
                             ArrayAdapter<String> adapter1 = new ArrayAdapter<String>
                                     (this, android.R.layout.simple_expandable_list_item_1, strs1);
                             listView.setAdapter(adapter1);
