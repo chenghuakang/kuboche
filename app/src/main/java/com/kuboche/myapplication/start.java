@@ -20,16 +20,24 @@ import java.util.Locale;
 
 public class start extends Activity {
 
+    //插入数据
     public void main() {
         User U1;
-        U1 = new User("18171370371", "可可", "123456", "爸爸的生日", "8月7日");
-        U1.save();
-        U1 = new User("18171370372", "小可可", "1234567", "爸爸的生日", "8月7日");
-        U1.save();
-        U1 = new User("18171370373", "大可可", "12345678", "爸爸的生日", "8月7日");
-        U1.save();
-        U1 = new User("18171370378", "大可可", "12345678", "爸爸的生日", "8月7日");
-        U1.save();
+        List<User> userList= User.find(User.class,"account=?","18171370371");
+        if(userList.size()==0){
+            U1 = new User("18171370371", "可可", "123456", "爸爸的生日", "8月7日");
+            U1.save();}
+
+        userList= User.find(User.class,"account=?","18171370372");
+        if(userList.size()==0){
+            U1 = new User("18171370372", "小可可", "1234567", "爸爸的生日", "8月7日");
+            U1.save();}
+
+        userList= User.find(User.class,"account=?","18171370373");
+        if(userList.size()==0){
+            U1 = new User("18171370373", "大可可", "12345678", "爸爸的生日", "8月7日");
+            U1.save();}
+
     }
 
     @Override
@@ -37,6 +45,9 @@ public class start extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
         main();
+
+        PackRecord p = new PackRecord("111", "njnsajdk", 6.646, new Date());
+        p.save();
     }
 
     @Override
@@ -46,18 +57,21 @@ public class start extends Activity {
 
     public void logIn(View v) {
         Intent i = new Intent();
+        //获取用户输入的账号
         EditText editText1 = (EditText) findViewById(R.id.account);
         String account = editText1.getText().toString();
+        //获取用户输入的密码
         EditText editText2 = (EditText) findViewById(R.id.password);
         String password = editText2.getText().toString();
-
+        //检验用户的账号密码是否正确
         List<User> userList = User.find(User.class, "account=? and password=?", account, password);
         if (userList.size() > 0) {
             i.setClassName(getApplicationContext(), "com.kuboche.myapplication.framework");
             startActivity(i);
-            /*setContentView(R.layout.framework);*/
+
         } else {
-            Toast.makeText(this, "密码错误", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "账号或密码错误", Toast.LENGTH_LONG).show();
+            editText2.setText("");
         }
     }
 
@@ -96,4 +110,6 @@ public class start extends Activity {
         }
     }
 }
+
+
 
