@@ -84,11 +84,11 @@ public class aboutme extends Fragment implements AdapterView.OnItemClickListener
                     Date date = new Date();
                     String[] strs3 = new String[6];
                     strs3[0] = "卫星数：" + "7/17";
-                    strs3[0] = "状态：" + "单点";
-                    strs3[0] = "WGS84纬度：\n" + "n50.049093587969466";
-                    strs3[0] = "WGS84经度：\n" + "e8.572699427604675";
-                    strs3[0] = "WGS84大地高：" + "46.20000";
-                    strs3[0] = "时间：\n" + date.toString();
+                    strs3[1] = "状态：" + "单点";
+                    strs3[2] = "WGS84纬度：\n" + "n50.049093587969466";
+                    strs3[3] = "WGS84经度：\n" + "e8.572699427604675";
+                    strs3[4] = "WGS84大地高：" + "46.20000";
+                    strs3[5] = "时间：\n" + date.toString();
                     ArrayAdapter<String> adapter3 = new ArrayAdapter<String>
                             (getActivity(), android.R.layout.simple_expandable_list_item_1, strs3);
                     listView.setAdapter(adapter3);
@@ -100,8 +100,6 @@ public class aboutme extends Fragment implements AdapterView.OnItemClickListener
 
         }
     }
-
-
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);

@@ -13,13 +13,17 @@ public class pandora2DS extends SugarRecord implements Serializable {
     private double averageCost;//人均消费
     private String contactWay;//联系方式
     private String contactPerson;//联系人
+    private double x;
+    private double y;
 
     public pandora2DS(){}
-    public pandora2DS(String name, String location, double averageCost, String contactWay) {
+    public pandora2DS(String name, String location, double averageCost, String contactWay,double x,double y) {
         this.name = name;
         this.location = location;
         this.averageCost = averageCost;
         this.contactWay = contactWay;
+        this.x = x;
+        this.y = y;
     }
 
     public String getName() {
@@ -33,6 +37,14 @@ public class pandora2DS extends SugarRecord implements Serializable {
     }
     public String getAverageCost() {
         return  ""+averageCost;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
     }
 
     public void setName(String name) {
@@ -51,4 +63,11 @@ public class pandora2DS extends SugarRecord implements Serializable {
         this.averageCost = averageCost;
     }
 
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
 }
