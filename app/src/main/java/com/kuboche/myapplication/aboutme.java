@@ -2,11 +2,8 @@ package com.kuboche.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.Telephony;
-import android.support.annotation.Nullable;
+
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +17,6 @@ import android.widget.Toast;
 import com.kuboche.bean.PackRecord;
 import com.kuboche.bean.User;
 
-import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 import android.view.View.OnClickListener;
@@ -31,7 +27,7 @@ public class aboutme extends Fragment implements AdapterView.OnItemClickListener
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
              view = inflater.inflate(R.layout.aboutme, container, false);
         //要显示的数据
-        String[] strs = {"我的账户", "停车记录", "账户信息", "注销账户"};
+        String[] strs = {"我的账户", "停车记录", "注销账户","我的位置"};
         //创建ArrayAdapter
         adapter = new ArrayAdapter<String>
                 (getActivity(), android.R.layout.simple_expandable_list_item_1, strs);
@@ -80,17 +76,25 @@ public class aboutme extends Fragment implements AdapterView.OnItemClickListener
                     listView.setAdapter(adapter2);
                     break;
                 case 2:
+                    Intent intent2 = new Intent();
+                    intent2.setClassName(getActivity(), "com.kuboche.myapplication.start");
+                    startActivity(intent2);
                     break;
                 case 3:
-                    Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + "10086"));
-                    //sendIntent.setPackage("com.android.mms");
-                    sendIntent.putExtra("sms_body", "康程华要在马路上停车");
-                    startActivity(sendIntent);
-                    break;
+                    Date date = new Date();
+                    String[] strs3 = new String[6];
+                    strs3[0] = "卫星数：" + "7/17";
+                    strs3[0] = "状态：" + "单点";
+                    strs3[0] = "WGS84纬度：\n" + "n50.049093587969466";
+                    strs3[0] = "WGS84经度：\n" + "e8.572699427604675";
+                    strs3[0] = "WGS84大地高：" + "46.20000";
+                    strs3[0] = "时间：\n" + date.toString();
+                    ArrayAdapter<String> adapter3 = new ArrayAdapter<String>
+                            (getActivity(), android.R.layout.simple_expandable_list_item_1, strs3);
+                    listView.setAdapter(adapter3);
+                break;
                 case 4:
-
                     break;
-
                 default:
             }
 

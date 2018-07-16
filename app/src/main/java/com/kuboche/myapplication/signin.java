@@ -14,6 +14,9 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.kuboche.bean.User;
 
 import java.util.List;
@@ -26,21 +29,10 @@ public class signin extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
-
-
-        /*
-        sp.setOnItemSelectedListener(new OnItemSelectedListener() {
-
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //拿到被选择项的值
-                securityQuestion = (String) sp.getSelectedItem();
-            }
-            public void onNothingSelected(AdapterView<?> parent) {
-                // TODO Auto-generated method stub
-
-            }
-        });
-*/
+       /* MobileAds.initialize(context,context.getString(R.string.ad_app));
+        AdRequest adRequest = new AdRequest.Builder().build();
+        AdView mAdView = (AdView) findViewById(R.id.login_av);
+        mAdView.loadAd(adRequest);*/
     }
 
     public void signin1(View v) {
