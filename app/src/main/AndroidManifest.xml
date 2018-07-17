@@ -18,7 +18,8 @@
             android:value="true" />
         <meta-data android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.kuboche.bean" />
-        <activity android:name="com.kuboche.myapplication.Splash">
+        <activity android:name="com.kuboche.myapplication.Splash"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

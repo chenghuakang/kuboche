@@ -101,9 +101,9 @@ public class aboutme extends Fragment implements AdapterView.OnItemClickListener
                 case 3:
                     if(!GPS.isGpsEnabled(getContext())){
                         Toast.makeText(getActivity(), "请打开网络或GPS定位功能!", Toast.LENGTH_SHORT).show();
-                    }/*else if(GPS.isLocationEnabled(getContext())){
+                    }else if(!GPS.isLocationEnabled(getContext())){
                         Toast.makeText(getActivity(), "定位模块不可用", Toast.LENGTH_SHORT).show();
-                    }*/
+                    }
                     else {
                         double x = 50.049093587969466;
                         double y = 8.572699427604675;
