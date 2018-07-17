@@ -1,7 +1,9 @@
 package com.kuboche.myapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -76,6 +78,13 @@ public class signin extends Activity {
                     else {//信息全部填对时则注册
                         User U1 = new User(account, null, pwd1, securityQuestion, securityAnswer);
                         U1.save();
+                        SharedPreferences preferences=getSharedPreferences("user", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor=preferences.edit();
+                        //String name="xixi";
+                        //String age="22";
+                        editor.putString("data", account);
+                        //editor.putString("age", age);
+                        editor.commit();
                         i.setClassName(getApplicationContext(), "com.kuboche.myapplication.framework");
                         startActivity(i);
                         Toast.makeText(this, "注册成功！", Toast.LENGTH_LONG).show();

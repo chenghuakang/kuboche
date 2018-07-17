@@ -9,10 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#3F51B5"
+        android:background="@color/colorPrimary"
         android:padding="16dp"
         android:text="车位租赁信息"
-        android:textSize="24dp" />
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        android:gravity="center"/>
 
     <!--<ScrollView
         android:layout_width="match_parent"

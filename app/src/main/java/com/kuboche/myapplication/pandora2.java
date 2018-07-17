@@ -14,7 +14,7 @@ import java.util.List;
 public class pandora2 extends Activity {
     ListView listView;
     public  void main(){
-        pandora2DS carService = new pandora2DS("天行汽车美容中心","武汉市洪山区珞喻路152号",708.00,"18171370371",44.2343,50.1234);
+        pandora2DS carService = new pandora2DS("天行汽车美容中心","武汉市洪山区珞喻路152号",708.00,"18171370371",40.2343,50.1234);
         carService.save();
         carService = new pandora2DS("向创汽车服务中心","武汉市武昌区",800,"18171372219",44.2333,50.1111);
         carService.save();

@@ -30,39 +30,40 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#000000"/>
+            android:layout_height="2dp"
+            android:background="#B2EBF2"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/framework1"
+                android:textColor="#0097A7"
                 android:background="@android:color/transparent"
-                android:drawableTop="@drawable/btn_1find"
+                android:drawableTop="@drawable/btn_1"
                 android:onClick="loan"
-                android:id="@+id/fragment1"
-                android:layout_marginTop="8dp"/>
+                android:id="@+id/fragment1" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="@string/framework2"
-                android:drawableTop="@drawable/btn_2box"
-                android:onClick="pandora"
-                android:layout_marginTop="8dp"/>
+                android:textColor="#0097A7"
+                android:drawableTop="@drawable/btn_2"
+                android:onClick="pandora" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="@string/framework3"
-                android:drawableTop="@drawable/btn_3info"
-                android:onClick="about_me"
-                android:layout_marginTop="8dp"/>
+                android:textColor="#0097A7"
+                android:drawableTop="@drawable/btn_3"
+                android:onClick="about_me"/>
         </LinearLayout>
 
 

@@ -9,10 +9,10 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="center|center_horizontal|center_vertical"
-        android:background="#7AC5CD">
+        android:background="@color/colorPrimary">
         <Button
             android:id="@+id/onekey"
-            android:background="@drawable/shape"
+            android:background="@drawable/btn_circle"
             android:layout_width="250dip"
             android:layout_height="250dip"
             android:gravity="center"

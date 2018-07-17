@@ -1,7 +1,9 @@
 package com.kuboche.myapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -13,6 +15,10 @@ import android.widget.Toast;
 import com.kuboche.bean.PackRecord;
 import com.kuboche.bean.User;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.time.Instant;
 import java.util.Date;
 import java.util.List;
@@ -55,7 +61,7 @@ public class start extends Activity {
         super.onPause();
     }
 
-    public void logIn(View v) {
+    public void logIn(View v) throws IOException {
         Intent i = new Intent();
         //获取用户输入的账号
         EditText editText1 = (EditText) findViewById(R.id.account);
@@ -66,6 +72,7 @@ public class start extends Activity {
         //检验用户的账号密码是否正确
         List<User> userList = User.find(User.class, "account=? and password=?", account, password);
         if (userList.size() > 0) {
+            saveUserInfo(account);
             i.setClassName(getApplicationContext(), "com.kuboche.myapplication.framework");
             startActivity(i);
 
@@ -108,7 +115,19 @@ public class start extends Activity {
             i.setClassName(getApplicationContext(), "com.kuboche.myapplication.start");
             startActivity(i);
         }
+
     }
+
+    public void saveUserInfo(String account){
+        SharedPreferences preferences=getSharedPreferences("user", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=preferences.edit();
+        //String name="xixi";
+        //String age="22";
+        editor.putString("data", account);
+        //editor.putString("age", age);
+        editor.commit();
+    }
+
 }
 
 
