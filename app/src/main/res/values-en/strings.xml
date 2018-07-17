@@ -56,4 +56,9 @@
     <string name="securityAnswer">Please input your Security Answer</string>
     <string name="toast1">Please Signin First</string>
     <string name="toast2">There is no account</string>
+    <string name="aboutme_bt1">My Account</string>
+    <string name="aboutme_bt2">Parking Record</string>
+    <string name="aboutme_bt3">My Locate</string>
+    <string name="aboutme_bt4">Change Record</string>
+    <string name="aboutme_bt5">Logout</string>
 </resources>

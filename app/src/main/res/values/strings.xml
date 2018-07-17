@@ -58,4 +58,9 @@
     <string name="securityAnswer">请输入密保答案</string>
     <string name="toast1">请先注册</string>
     <string name="toast2">账号不存在</string>
+    <string name="aboutme_bt1">我的账户</string>
+    <string name="aboutme_bt2">停车记录</string>
+    <string name="aboutme_bt3">我的位置</string>
+    <string name="aboutme_bt4">修改记录</string>
+    <string name="aboutme_bt5">注销账号</string>
 </resources>

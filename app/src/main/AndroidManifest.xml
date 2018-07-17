@@ -37,12 +37,14 @@
         <activity android:name="com.kuboche.myapplication.MainActivity"></activity>
         <activity android:name="com.kuboche.myapplication.change_password1"></activity>
         <activity android:name="com.kuboche.myapplication.signin"></activity>
-        <activity android:name="com.kuboche.myapplication.aboutme"></activity>
         <activity android:name="com.kuboche.myapplication.pandora1"></activity>
         <activity android:name="com.kuboche.myapplication.pandora2"></activity>
         <activity android:name="com.kuboche.myapplication.pandora3"></activity>
         <activity android:name="com.kuboche.myapplication.data2"></activity>
         <activity android:name="com.kuboche.myapplication.park"></activity>
+        <activity android:name="com.kuboche.myapplication.aboutme1"></activity>
+        <activity android:name="com.kuboche.myapplication.aboutme2"></activity>
+        <activity android:name="com.kuboche.myapplication.aboutme3"></activity>
 
     </application>
 
@@ -53,7 +55,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>

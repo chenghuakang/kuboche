@@ -4,20 +4,71 @@
     android:id="@+id/aboutme"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button
+
+
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/aboutme_btn1"
-        android:id="@+id/account2"/>
+        android:layout_gravity="center"
+        android:src="@drawable/head4"
+        android:adjustViewBounds="true"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/list_view">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/aboutme_btn1"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:background="#FCFCFC"
+            android:text="我的账户"
+            android:textSize="24sp"
+            />
 
-        </ListView>
+        <Button
+            android:id="@+id/aboutme_btn2"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:background="#FCFCFC"
+            android:text="停车记录"
+            android:textSize="24sp"
+            />
+
+        <Button
+            android:id="@+id/aboutme_btn3"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="#FCFCFC"
+            android:text="我的位置"
+            android:textSize="24sp"
+            />
+
+
+        <Button
+            android:id="@+id/aboutme_btn4"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:background="#FCFCFC"
+            android:text="修改密码"
+            android:textSize="24sp"
+            />
+
+        <Button
+            android:id="@+id/aboutme_btn5"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_common"
+            android:text="注销账号"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            />
     </LinearLayout>
 </LinearLayout>

@@ -24,7 +24,7 @@ import java.util.List;
 public class framework extends AppCompatActivity {
     PandoraFragment f1;
     data1 f2;
-    aboutme f3;
+    aboutmeFragment f3;
     Button b1;
     Button b2;
     Button b3;
@@ -67,7 +67,7 @@ public class framework extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         if (f3 == null) {
-            f3 = new aboutme();
+            f3 = new aboutmeFragment();
             transaction.add(R.id.frame, f3);
         }
         hideFragment(transaction);
