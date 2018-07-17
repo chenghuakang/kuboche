@@ -2,20 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/framework"
     android:orientation="vertical">
+
     <TextView
+        style="@style/longButton"
+        android:background="@color/colorPrimary"
         android:gravity="center"
         android:padding="16dp"
         android:text="活动信息"
-        android:background="@color/colorPrimary"
-        android:textColor="#ffffff"
-        style="@style/longButton"/>
+        android:textColor="#ffffff" />
 
-    <LinearLayout
-        style="@style/framework">
+    <LinearLayout style="@style/framework">
+
         <WebView
-            style="@style/framework"
-            android:id="@+id/webview">
-        </WebView>
+            android:id="@+id/webview"
+            style="@style/framework"></WebView>
     </LinearLayout>
 
 </LinearLayout>

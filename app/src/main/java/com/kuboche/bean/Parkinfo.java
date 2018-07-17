@@ -12,14 +12,15 @@ public class Parkinfo extends SugarRecord implements Serializable {
     private long charge;
     private Boolean empty;
 
-    public Parkinfo(String parkname, String position, long charge, Boolean empty){
-        this.parkname=parkname;
-        this.position=position;
-        this.charge=charge;
-        this.empty=empty;
+    public Parkinfo(String parkname, String position, long charge, Boolean empty) {
+        this.parkname = parkname;
+        this.position = position;
+        this.charge = charge;
+        this.empty = empty;
     }
 
-    public Parkinfo(){}
+    public Parkinfo() {
+    }
 
     public String getParkname() {
         return parkname;

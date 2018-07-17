@@ -4,9 +4,9 @@
     android:orientation="vertical">
 
     <ImageView
+        style="@style/image"
         android:background="#ffffff"
-        android:src="@drawable/head2"
-        style="@style/image" />
+        android:src="@drawable/head2" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,10 +28,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:onClick="changeLanguage"
             android:text="@string/Button1"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="24sp"
-            android:onClick="changeLanguage"/>
+            android:textSize="24sp" />
 
         <View
             android:layout_width="wrap_content"
@@ -42,61 +42,62 @@
     <View style="@style/coverRoomView" />
 
     <EditText
+        android:id="@+id/account"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:hint="@string/hint1"
-        android:textSize="24sp"
-        android:id="@+id/account"/>
+        android:textSize="24sp" />
 
     <EditText
+        android:id="@+id/password"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:hint="@string/hint2"
         android:inputType="textPassword"
-        android:textSize="24sp"
-        android:id="@+id/password"/>
+        android:textSize="24sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp">
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_special"
-        android:onClick="logIn"
-        android:text="@string/logIn"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        android:textSize="16dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_special"
+            android:onClick="logIn"
+            android:text="@string/logIn"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
         <View
             android:layout_width="15dp"
-            android:layout_height="15dp">
-        </View>
-    <Button
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/btn_common"
-        android:onClick="signIn"
-        android:text="@string/signIn"
-        android:textColor="#ffffff"
-        android:textSize="16dp"
-        android:textStyle="bold" />
-</LinearLayout>
+            android:layout_height="15dp"></View>
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/btn_common"
+            android:onClick="signIn"
+            android:text="@string/signIn"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginBottom="20dp"
-    android:clickable="true"
-    android:onClick="password1"
-    android:text="@string/changePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:onClick="password1"
+        android:text="@string/changePassword"
         android:textColor="@color/colorPrimaryDark" />
 </LinearLayout>

@@ -14,14 +14,16 @@ public class User extends SugarRecord implements Serializable {
     private String securityAnswer;
 
 
-    public User(String account,String nickname,String password,String securityQuestion,String securityAnswer){
-        this.account=account;
-        this.nickname=nickname;
-        this.password=password;
-        this.securityQuestion=securityQuestion;
-        this.securityAnswer=securityAnswer;
+    public User(String account, String nickname, String password, String securityQuestion, String securityAnswer) {
+        this.account = account;
+        this.nickname = nickname;
+        this.password = password;
+        this.securityQuestion = securityQuestion;
+        this.securityAnswer = securityAnswer;
     }
-    public User(){}
+
+    public User() {
+    }
 
     public String getAccount() {
         return account;

@@ -5,13 +5,13 @@
     android:orientation="vertical">
 
     <TextView
+        style="@style/longButton"
         android:layout_gravity="center"
         android:background="@color/colorPrimary"
+        android:gravity="center"
         android:padding="16dp"
         android:text="车位租赁信息"
-        android:textColor="#ffffff"
-        android:gravity="center"
-        style="@style/longButton"/>
+        android:textColor="#ffffff" />
 
     <!--<ScrollView
         android:layout_width="match_parent"
@@ -26,12 +26,12 @@
                 />
         </LinearLayout>
     </ScrollView>-->
-    <LinearLayout
-        style="@style/longView">
+    <LinearLayout style="@style/longView">
+
         <ListView
+            android:id="@+id/pan1_listview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/pan1_listview">
+            android:layout_height="match_parent">
 
         </ListView>
     </LinearLayout>

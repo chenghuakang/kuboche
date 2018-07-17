@@ -4,12 +4,12 @@
     android:orientation="vertical">
 
     <TextView
+        style="@style/longButton"
+        android:background="@color/colorPrimary"
         android:gravity="center"
         android:padding="16dp"
         android:text="汽车服务点信息"
-        android:background="@color/colorPrimary"
-        android:textColor="#ffffff"
-        style="@style/longButton"/>
+        android:textColor="#ffffff" />
     <!-- <ScrollView
          android:layout_width="match_parent"
          android:layout_height="wrap_content">
@@ -31,13 +31,12 @@
 
          </LinearLayout>
      </ScrollView>-->
-    <LinearLayout
-        style="@style/longView">
+    <LinearLayout style="@style/longView">
+
         <ListView
+            android:id="@+id/pan2_listview"
             style="@style/longView"
-            android:fadingEdge="none"
-            android:id="@+id/pan2_listview">
-        </ListView>
+            android:fadingEdge="none"></ListView>
     </LinearLayout>
 
 </LinearLayout>

@@ -1,4 +1,5 @@
-package  com.kuboche.myapplication;
+package com.kuboche.myapplication;
+
 import android.content.Context;
 import android.content.Intent;
 import android.location.Address;
@@ -19,8 +20,8 @@ import java.util.Locale;
 public class GPS {
 
     private static OnLocationChangeListener mListener;
-    private static MyLocationListener       myLocationListener;
-    public static LocationManager          mLocationManager;
+    private static MyLocationListener myLocationListener;
+    public static LocationManager mLocationManager;
 
     private GPS() {
         throw new UnsupportedOperationException("u can't instantiate me...");

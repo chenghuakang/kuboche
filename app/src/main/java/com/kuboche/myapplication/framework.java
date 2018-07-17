@@ -21,7 +21,7 @@ import java.util.Date;
 import java.util.List;
 
 
-public class framework extends AppCompatActivity{
+public class framework extends AppCompatActivity {
     PandoraFragment f1;
     data1 f2;
     aboutme f3;
@@ -30,17 +30,19 @@ public class framework extends AppCompatActivity{
     Button b3;
     ListView listView;
     ArrayAdapter<String> adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        b1=(Button)findViewById(R.id.fragment1);
+        b1 = (Button) findViewById(R.id.fragment1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.framework);
         loan(b1);
     }
-    public void pandora(View v){
+
+    public void pandora(View v) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        if(f1 == null) {
+        if (f1 == null) {
             f1 = new PandoraFragment();
             transaction.add(R.id.frame, f1);
         }
@@ -48,10 +50,11 @@ public class framework extends AppCompatActivity{
         transaction.show(f1);
         transaction.commit();
     }
-    public void loan(View v){
+
+    public void loan(View v) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        if(f2 == null) {
+        if (f2 == null) {
             f2 = new data1();
             transaction.add(R.id.frame, f2);
         }
@@ -59,25 +62,27 @@ public class framework extends AppCompatActivity{
         transaction.show(f2);
         transaction.commit();
     }
-    public void about_me(View v){
+
+    public void about_me(View v) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        if(f3 == null) {
+        if (f3 == null) {
             f3 = new aboutme();
             transaction.add(R.id.frame, f3);
         }
         hideFragment(transaction);
         transaction.show(f3);
-        transaction.commit();                                              }
+        transaction.commit();
+    }
 
-    private void hideFragment(FragmentTransaction transaction){
-        if(f1 != null){
+    private void hideFragment(FragmentTransaction transaction) {
+        if (f1 != null) {
             transaction.hide(f1);
         }
-        if(f2 != null){
+        if (f2 != null) {
             transaction.hide(f2);
         }
-        if(f3 != null){
+        if (f3 != null) {
             transaction.hide(f3);
         }
     }

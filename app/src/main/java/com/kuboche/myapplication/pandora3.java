@@ -30,10 +30,10 @@ public class pandora3 extends Activity {
         if ((keyCode == KeyEvent.KEYCODE_BACK) && webview.canGoBack()) {
             webview.goBack(); //goBack()表示返回WebView的上一页面
             return true;
-        }else{
+        } else {
             finish();
         }
-        return  false;
+        return false;
     }
 
     //Web视图

@@ -29,20 +29,23 @@ public class start extends Activity {
     //插入数据
     public void main() {
         User U1;
-        List<User> userList= User.find(User.class,"account=?","18171370371");
-        if(userList.size()==0){
+        List<User> userList = User.find(User.class, "account=?", "18171370371");
+        if (userList.size() == 0) {
             U1 = new User("18171370371", "可可", "123456", "爸爸的生日", "8月7日");
-            U1.save();}
+            U1.save();
+        }
 
-        userList= User.find(User.class,"account=?","18171370372");
-        if(userList.size()==0){
+        userList = User.find(User.class, "account=?", "18171370372");
+        if (userList.size() == 0) {
             U1 = new User("18171370372", "小可可", "1234567", "爸爸的生日", "8月7日");
-            U1.save();}
+            U1.save();
+        }
 
-        userList= User.find(User.class,"account=?","18171370373");
-        if(userList.size()==0){
+        userList = User.find(User.class, "account=?", "18171370373");
+        if (userList.size() == 0) {
             U1 = new User("18171370373", "大可可", "12345678", "爸爸的生日", "8月7日");
-            U1.save();}
+            U1.save();
+        }
 
     }
 
@@ -118,9 +121,9 @@ public class start extends Activity {
 
     }
 
-    public void saveUserInfo(String account){
-        SharedPreferences preferences=getSharedPreferences("user", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor=preferences.edit();
+    public void saveUserInfo(String account) {
+        SharedPreferences preferences = getSharedPreferences("user", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
         //String name="xixi";
         //String age="22";
         editor.putString("data", account);

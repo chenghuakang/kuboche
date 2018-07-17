@@ -14,8 +14,12 @@ public class pandora1DS extends SugarRecord implements Serializable {
     private String contactWay;//联系方式
     private String introduction;//简介
 
-    public pandora1DS(){};
-    public pandora1DS( String location,float price,String contactWay,String contactPerson,String introduction) {
+    public pandora1DS() {
+    }
+
+    ;
+
+    public pandora1DS(String location, float price, String contactWay, String contactPerson, String introduction) {
         this.location = location;
         this.price = price;
         this.contactWay = contactWay;

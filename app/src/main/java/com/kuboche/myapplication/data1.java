@@ -12,11 +12,12 @@ import android.widget.Button;
 
 public class data1 extends Fragment {
     Button btn1;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.data1,null);
-        btn1 = (Button)view.findViewById(R.id.onekey);
+        View view = inflater.inflate(R.layout.data1, null);
+        btn1 = (Button) view.findViewById(R.id.onekey);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -6,13 +6,14 @@
     tools:context=".MainActivity">
 
     <TextView
+        style="@style/longButton"
         android:layout_gravity="center"
         android:background="@color/colorPrimary"
+        android:gravity="center"
         android:padding="16dp"
         android:text="@string/signIn"
-        android:textColor="#ffffff"
-        android:gravity="center"
-        style="@style/longButton"/>
+        android:textColor="#ffffff" />
+
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -20,96 +21,116 @@
         android:stretchColumns="0,3">
 
         <TableRow>
+
             <TextView />
+
             <TextView
-                android:text="新建账号："
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="新建账号："
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="24dp"
-                />
+                android:textSize="24dp" />
+
             <EditText
                 android:id="@+id/account"
                 style="@style/signinEditText" />
+
             <TextView />
         </TableRow>
+
         <TableRow android:layout_marginTop="20px">
+
             <TextView />
+
             <TextView
-                android:text="设置密码："
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="设置密码："
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="24dp"
-                />
+                android:textSize="24dp" />
+
             <EditText
                 android:id="@+id/pwd1"
-                android:inputType="textPassword"
-                style="@style/signinEditText" />
+                style="@style/signinEditText"
+                android:inputType="textPassword" />
+
             <TextView />
         </TableRow>
+
         <TableRow android:layout_marginTop="20px">
+
             <TextView />
+
             <TextView
-                android:text="确认密码："
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="确认密码："
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="24dp"
-                />
+                android:textSize="24dp" />
+
             <EditText
                 android:id="@+id/pwd2"
-                android:inputType="textPassword"
-                style="@style/signinEditText" />
+                style="@style/signinEditText"
+                android:inputType="textPassword" />
+
             <TextView />
         </TableRow>
+
         <TableRow android:layout_marginTop="20px">
+
             <TextView />
+
             <TextView
-                android:text="密保问题："
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="密保问题："
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="24dp"
-                />
+                android:textSize="24dp" />
+
             <Spinner
                 android:id="@+id/securityQuestion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:entries="@array/question"
                 android:prompt="@string/spin_title"
-                android:spinnerMode="dialog"
-                android:entries="@array/question"/>
+                android:spinnerMode="dialog" />
+
             <TextView />
         </TableRow>
 
         <TableRow android:layout_marginTop="20px">
+
             <TextView />
+
             <TextView
-                android:text="设置答案："
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="设置答案："
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="24dp"
-                />
+                android:textSize="24dp" />
+
             <EditText
                 android:id="@+id/securityAnswer"
-                android:inputType="textPassword"
-                style="@style/signinEditText" />
+                style="@style/signinEditText"
+                android:inputType="textPassword" />
+
             <TextView />
         </TableRow>
 
 
-        <LinearLayout android:layout_marginTop="20px"
+        <LinearLayout
+            android:layout_marginTop="20px"
             android:gravity="center">
+
             <Button
                 android:id="@+id/login"
-                android:text="注册"
-                android:textColor="#ffffff"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/btn_special"
-                android:textSize="20dp"
                 android:onClick="signin1"
+                android:text="注册"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
                 tools:ignore="OnClick" />
         </LinearLayout>
     </TableLayout>

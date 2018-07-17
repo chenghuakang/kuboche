@@ -13,13 +13,16 @@ public class PackRecord extends SugarRecord implements Serializable {
     private String parkId;
     private Double payment;
 
-    public PackRecord(){}
-    public PackRecord(String parkId,String name,Double payment,Date date){
+    public PackRecord() {
+    }
+
+    public PackRecord(String parkId, String name, Double payment, Date date) {
         this.date = date;
         this.name = name;
         this.parkId = parkId;
         this.payment = payment;
     }
+
     public Date getDate() {
         return date;
     }

@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    style="@style/framework">
+    style="@style/framework"
+    android:orientation="vertical">
+
     <TextView
+        style="@style/longButton"
+        android:background="@color/colorPrimary"
         android:gravity="center"
         android:padding="16dp"
         android:text="@string/result"
-        android:textColor="#ffffff"
-        android:background="@color/colorPrimary"
-        style="@style/longButton">
-    </TextView>
+        android:textColor="#ffffff"></TextView>
 
-    <LinearLayout
-        style="@style/longView">
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/information">
-    </ListView>
+    <LinearLayout style="@style/longView">
+
+        <ListView
+            android:id="@+id/information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></ListView>
     </LinearLayout>
 </LinearLayout>

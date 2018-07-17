@@ -16,8 +16,10 @@ public class pandora2DS extends SugarRecord implements Serializable {
     private double x;
     private double y;
 
-    public pandora2DS(){}
-    public pandora2DS(String name, String location, double averageCost, String contactWay,double x,double y) {
+    public pandora2DS() {
+    }
+
+    public pandora2DS(String name, String location, double averageCost, String contactWay, double x, double y) {
         this.name = name;
         this.location = location;
         this.averageCost = averageCost;
@@ -29,14 +31,17 @@ public class pandora2DS extends SugarRecord implements Serializable {
     public String getName() {
         return name;
     }
+
     public String getLocation() {
         return location;
     }
+
     public String getContactWay() {
         return contactWay;
     }
+
     public String getAverageCost() {
-        return  ""+averageCost;
+        return "" + averageCost;
     }
 
     public void setX(double x) {

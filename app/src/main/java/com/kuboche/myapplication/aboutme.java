@@ -27,6 +27,7 @@ import com.kuboche.bean.User;
 
 import java.util.Date;
 import java.util.List;
+
 import android.view.View.OnClickListener;
 
 import static com.orm.util.ContextUtil.getSharedPreferences;
@@ -38,10 +39,11 @@ public class aboutme extends Fragment implements AdapterView.OnItemClickListener
     private static final String TAG = "GpsActivity";
     private LocationManager locationManager;
     private Context mContext;
-    public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.aboutme, container, false);
         //要显示的数据
-        String[] strs = {"我的账户", "停车记录", "注销账户","我的位置"};
+        String[] strs = {"我的账户", "停车记录", "注销账户", "我的位置"};
         //创建ArrayAdapter
         adapter = new ArrayAdapter<String>
                 (getActivity(), android.R.layout.simple_expandable_list_item_1, strs);
@@ -51,6 +53,7 @@ public class aboutme extends Fragment implements AdapterView.OnItemClickListener
         listView.setOnItemClickListener(this);
         return view;
     }
+
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         if (listView.getAdapter().equals(adapter)) {
@@ -69,13 +72,13 @@ public class aboutme extends Fragment implements AdapterView.OnItemClickListener
             switch ((int) l) {
                 case 0:
                     //读出账号
-                    SharedPreferences preferences=getSharedPreferences("user", Context.MODE_PRIVATE);
-                    String account=preferences.getString("data", "defaultname");
-                    List<User> userList=User.find(User.class,"account=?",account);
+                    SharedPreferences preferences = getSharedPreferences("user", Context.MODE_PRIVATE);
+                    String account = preferences.getString("data", "defaultname");
+                    List<User> userList = User.find(User.class, "account=?", account);
                     //List<User> us = User.listAll(User.class);
                     if (!userList.isEmpty()) {
                         User us1 = userList.get(0);
-                        String[] strs1 = {"账号： " + us1.getAccount(),"用户组：普通"};
+                        String[] strs1 = {"账号： " + us1.getAccount(), "用户组：普通"};
                         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>
                                 (getActivity(), android.R.layout.simple_expandable_list_item_1, strs1);
                         listView.setAdapter(adapter1);
@@ -99,30 +102,29 @@ public class aboutme extends Fragment implements AdapterView.OnItemClickListener
                     startActivity(intent2);
                     break;
                 case 3:
-                    if(!GPS.isGpsEnabled(getContext())){
+                    if (!GPS.isGpsEnabled(getContext())) {
                         Toast.makeText(getActivity(), "请打开网络或GPS定位功能!", Toast.LENGTH_SHORT).show();
-                    }else if(!GPS.isLocationEnabled(getContext())){
+                    } else if (!GPS.isLocationEnabled(getContext())) {
                         Toast.makeText(getActivity(), "定位模块不可用", Toast.LENGTH_SHORT).show();
-                    }
-                    else {
+                    } else {
                         double x = 50.049093587969466;
                         double y = 8.572699427604675;
-                        GPS.getAddress(getContext(),x,y);
+                        GPS.getAddress(getContext(), x, y);
                         Date date = new Date();
                         String[] strs3 = new String[8];
                         strs3[0] = "卫星数：" + "7/17";
                         strs3[1] = "状态：" + "单点";
-                        strs3[2] = "WGS84纬度：\n"+x ;
-                        strs3[3] = "WGS84经度：\n" +y;
+                        strs3[2] = "WGS84纬度：\n" + x;
+                        strs3[3] = "WGS84经度：\n" + y;
                         strs3[4] = "WGS84大地高：" + "46.20000";
                         strs3[5] = "时间：\n" + date.toString();
-                        strs3[6] = "国家：" + GPS.getCountryName(getContext(),x,y);
-                        strs3[7] = "街道：" + GPS.getStreet(getContext(),x,y);
+                        strs3[6] = "国家：" + GPS.getCountryName(getContext(), x, y);
+                        strs3[7] = "街道：" + GPS.getStreet(getContext(), x, y);
                         ArrayAdapter<String> adapter3;
                         adapter3 = new ArrayAdapter<String>
                                 (getActivity(), android.R.layout.simple_expandable_list_item_1, strs3);
                         listView.setAdapter(adapter3);
-                }
+                    }
 
 
                    /* if (!(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
@@ -205,7 +207,7 @@ public class aboutme extends Fragment implements AdapterView.OnItemClickListener
                 Location location = locationManager.getLastKnownLocation(provider);
                 Log.d(TAG, "onProviderDisabled.location = " + location);
                 //updateView(location);
-            }catch (SecurityException e){
+            } catch (SecurityException e) {
 
             }
         }
@@ -215,7 +217,6 @@ public class aboutme extends Fragment implements AdapterView.OnItemClickListener
             Log.d(TAG, "onProviderDisabled() called with " + "provider = [" + provider + "]");
         }
     };
-
 
 
 }

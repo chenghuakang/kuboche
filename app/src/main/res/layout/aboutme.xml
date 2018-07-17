@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:id="@+id/aboutme"
-    style="@style/framework">
+    style="@style/framework"
+    android:orientation="vertical">
+
     <Button
-        android:text="@string/aboutme_btn1"
         android:id="@+id/account2"
-        style="@style/longButton" />
+        style="@style/longButton"
+        android:text="@string/aboutme_btn1" />
 
     <LinearLayout style="@style/longView">
+
         <ListView
             android:id="@+id/list_view"
             style="@style/framework">
