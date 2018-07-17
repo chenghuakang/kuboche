@@ -118,7 +118,8 @@ public class aboutme extends Fragment implements AdapterView.OnItemClickListener
                         strs3[5] = "时间：\n" + date.toString();
                         strs3[6] = "国家：" + GPS.getCountryName(getContext(),x,y);
                         strs3[7] = "街道：" + GPS.getStreet(getContext(),x,y);
-                        ArrayAdapter<String> adapter3 = new ArrayAdapter<String>
+                        ArrayAdapter<String> adapter3;
+                        adapter3 = new ArrayAdapter<String>
                                 (getActivity(), android.R.layout.simple_expandable_list_item_1, strs3);
                         listView.setAdapter(adapter3);
                 }

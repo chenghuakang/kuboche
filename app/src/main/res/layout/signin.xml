@@ -2,20 +2,17 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/framework"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@color/colorPrimary"
         android:padding="16dp"
         android:text="@string/signIn"
-        android:textSize="24sp"
         android:textColor="#ffffff"
-        android:gravity="center"/>
+        android:gravity="center"
+        style="@style/longButton"/>
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -33,10 +30,7 @@
                 />
             <EditText
                 android:id="@+id/account"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="24dp"
-                android:minWidth="400px"/>
+                style="@style/signinEditText" />
             <TextView />
         </TableRow>
         <TableRow android:layout_marginTop="20px">
@@ -50,11 +44,8 @@
                 />
             <EditText
                 android:id="@+id/pwd1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="400px"
-                android:textSize="24dp"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                style="@style/signinEditText" />
             <TextView />
         </TableRow>
         <TableRow android:layout_marginTop="20px">
@@ -68,11 +59,8 @@
                 />
             <EditText
                 android:id="@+id/pwd2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="400px"
-                android:textSize="24dp"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                style="@style/signinEditText" />
             <TextView />
         </TableRow>
         <TableRow android:layout_marginTop="20px">
@@ -105,11 +93,8 @@
                 />
             <EditText
                 android:id="@+id/securityAnswer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="400px"
-                android:textSize="24dp"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                style="@style/signinEditText" />
             <TextView />
         </TableRow>
 
