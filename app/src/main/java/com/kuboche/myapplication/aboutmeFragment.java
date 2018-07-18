@@ -46,7 +46,7 @@ public class aboutmeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        btn4 = (Button) view.findViewById(R.id.aboutme_btn4);
+        btn4 = (Button) view.findViewById(R.id.aboutme_btn5);
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

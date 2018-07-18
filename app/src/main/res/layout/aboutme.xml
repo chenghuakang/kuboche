@@ -40,11 +40,11 @@
             android:text="@string/aboutme_bt3" />
 
 
-        <Button
+       <!-- <Button
             android:id="@+id/aboutme_btn4"
             style="@style/longButton"
             android:layout_height="64dp"
-            android:text="@string/aboutme_bt4" />
+            android:text="@string/aboutme_bt4" />-->
 
         <Button
             android:id="@+id/aboutme_btn5"
