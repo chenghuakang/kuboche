@@ -21,10 +21,11 @@ import java.util.Date;
 import java.util.List;
 
 
-public class framework extends AppCompatActivity {
+public class framework extends AppCompatActivity implements park.parkable{
     PandoraFragment f1;
     data1 f2;
     aboutmeFragment f3;
+    park f4;
     Button b1;
     Button b2;
     Button b3;
@@ -36,7 +37,7 @@ public class framework extends AppCompatActivity {
         b1 = (Button) findViewById(R.id.fragment1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.framework);
-        loan(b1);
+        park1(b1);
     }
 
     public void pandora(View v) {
@@ -75,6 +76,18 @@ public class framework extends AppCompatActivity {
         transaction.commit();
     }
 
+    public void park1(View v) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        if (f4 == null) {
+            f4 = new park();
+            transaction.add(R.id.frame, f4);
+        }
+        hideFragment(transaction);
+        transaction.show(f4);
+        transaction.commit();
+    }
+
     private void hideFragment(FragmentTransaction transaction) {
         if (f1 != null) {
             transaction.hide(f1);
@@ -85,6 +98,13 @@ public class framework extends AppCompatActivity {
         if (f3 != null) {
             transaction.hide(f3);
         }
+        if(f4 != null){
+            transaction.hide(f4);
+        }
+    }
+    @Override
+    public void parkCallBack(){
+        loan(b1);
     }
 
 }
