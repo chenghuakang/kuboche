@@ -4,18 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/framework">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="start" />
+    <LinearLayout style="@style/circleButtonLayout">
+
+        <Button
+            android:id="@+id/endPark"
+            android:text="@string/endpark"
+            style="@style/circleButton" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

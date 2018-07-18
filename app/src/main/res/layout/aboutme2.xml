@@ -2,9 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/framework">
 
-    <ListView
-        android:id="@+id/aboutmelist2"
-        style="@style/framework">
+    <TextView
+        style="@style/longButton"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="停车记录"
+        android:textColor="#ffffff" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/aboutmelist2"
+            style="@style/framework">
+        </ListView>
+    </LinearLayout>
 
-    </ListView>
 </LinearLayout>

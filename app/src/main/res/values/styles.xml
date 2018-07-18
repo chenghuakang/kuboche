@@ -88,4 +88,21 @@
         <item name="android:textSize">16dp</item>
     </style>
 
+    <style name="circleButton">
+        <item name="android:layout_width">250dip</item>
+        <item name="android:layout_height">250dip</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/btn_circle</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">50sp</item>
+    </style>
+
+    <style name="circleButtonLayout">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:gravity">center|center_horizontal|center_vertical</item>
+    </style>
+
 </resources>

@@ -16,6 +16,7 @@
     <string name="result">查找结果</string>
     <string name="parkname">停车场</string>
     <string name="parkinfo">详细信息</string>
+    <string name="endpark">结束停车</string>
 
     <!-- signin -->
     <string name="account">请输入手机号</string>
@@ -30,6 +31,7 @@
     <string name="answer">请输入答案</string>
 
     <!-- change_password2 -->
+    <string name="password2_1">请输入密码</string>
     <string name="new_password">请输入新密码</string>
     <string name="confirm_password">确认密码</string>
 
@@ -61,6 +63,7 @@
     <string name="aboutme_bt1">我的账户</string>
     <string name="aboutme_bt2">停车记录</string>
     <string name="aboutme_bt3">我的位置</string>
-    <string name="aboutme_bt4">修改记录</string>
+    <string name="aboutme_bt4">修改密码</string>
     <string name="aboutme_bt5">注销账号</string>
 </resources>
+

@@ -2,8 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/framework">
 
+    <TextView
+        style="@style/longButton"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="我的位置信息"
+        android:textColor="#ffffff" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <ListView
         android:id="@+id/aboutmelist3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        style="@style/framework">
+    </ListView>
+</LinearLayout>
+
 </LinearLayout>

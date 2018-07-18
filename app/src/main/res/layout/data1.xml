@@ -4,23 +4,13 @@
     style="@style/framework">
 
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@color/colorPrimary"
-        android:gravity="center|center_horizontal|center_vertical">
+    <LinearLayout style="@style/circleButtonLayout">
 
         <Button
             android:id="@+id/onekey"
-            android:layout_width="250dip"
-            android:layout_height="250dip"
-            android:layout_gravity="center"
-            android:background="@drawable/btn_circle"
-            android:gravity="center"
             android:text="@string/onekey"
-            android:textColor="#ffffff"
 
-            android:textSize="50sp" />
+            style="@style/circleButton" />
     </LinearLayout>
 
 </LinearLayout>

@@ -16,6 +16,7 @@
     <string name="result">result</string>
     <string name="parkname">name</string>
     <string name="parkinfo">information</string>
+    <string name="endpark">End Parking</string>
 
     <!-- signin -->
     <string name="account">Your Phone</string>
@@ -34,6 +35,7 @@
     <string name="confirm_password">repeat</string>
     <string name="new_password1">Please Repeat Your Password</string>
 
+    <string name="password2_1">Please Input Password</string>
     <string-array name="question">
         <item>Security Question</item>
         <item>lover's birthday</item>

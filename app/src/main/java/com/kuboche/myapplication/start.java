@@ -31,19 +31,19 @@ public class start extends Activity {
         User U1;
         List<User> userList = User.find(User.class, "account=?", "18171370371");
         if (userList.size() == 0) {
-            U1 = new User("18171370371", "可可", "123456", "爸爸的生日", "8月7日");
+            U1 = new User("18171370371", "可可", "123456", "爸爸的生日", "8月7日",false);
             U1.save();
         }
 
         userList = User.find(User.class, "account=?", "18171370372");
         if (userList.size() == 0) {
-            U1 = new User("18171370372", "小可可", "1234567", "爸爸的生日", "8月7日");
+            U1 = new User("18171370372", "小可可", "1234567", "爸爸的生日", "8月7日",false);
             U1.save();
         }
 
         userList = User.find(User.class, "account=?", "18171370373");
         if (userList.size() == 0) {
-            U1 = new User("18171370373", "大可可", "12345678", "爸爸的生日", "8月7日");
+            U1 = new User("18171370373", "大可可", "12345678", "爸爸的生日", "8月7日",false);
             U1.save();
         }
 

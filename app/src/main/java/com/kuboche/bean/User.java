@@ -12,14 +12,16 @@ public class User extends SugarRecord implements Serializable {
     private String password;
     private String securityQuestion;
     private String securityAnswer;
+    private boolean parking;
 
 
-    public User(String account, String nickname, String password, String securityQuestion, String securityAnswer) {
+    public User(String account, String nickname, String password, String securityQuestion, String securityAnswer,boolean parking) {
         this.account = account;
         this.nickname = nickname;
         this.password = password;
         this.securityQuestion = securityQuestion;
         this.securityAnswer = securityAnswer;
+        this.parking = parking;
     }
 
     public User() {
@@ -63,6 +65,14 @@ public class User extends SugarRecord implements Serializable {
 
     public void setSecurityQuestion(String securityQuestion) {
         this.securityQuestion = securityQuestion;
+    }
+
+    public boolean isParking() {
+        return parking;
+    }
+
+    public void setParking(boolean parking) {
+        this.parking = parking;
     }
 }
 

@@ -14,6 +14,7 @@ import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Date;
@@ -21,20 +22,21 @@ import java.util.List;
 
 import static com.orm.util.ContextUtil.getContext;
 
-public class aboutme3 extends Activity {
+public class aboutme3 extends Activity{
     ListView listView;
     private static final String TAG = "GpsActivity";
     private LocationManager locationManager;
     private Context mContext;
     double x;
     double y;
+    private Context context;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aboutme3);
-
-       /* if (!GPS.isGpsEnabled(getContext())) {
+        context=this;
+        if (!GPS.isGpsEnabled(getContext())) {
             Toast.makeText(this, "请打开网络或GPS定位功能!", Toast.LENGTH_SHORT).show();
         } else if (!GPS.isLocationEnabled(getContext())) {
             Toast.makeText(this, "定位模块不可用", Toast.LENGTH_SHORT).show();
@@ -62,9 +64,10 @@ public class aboutme3 extends Activity {
                     y = location.getLongitude();//获取经度
                 }
             }
-        }*/
+        }
+      /* GPSUnit.getCurrentLocation(getContext(),);
        x=50.049093587969466;
-       y=8.572699427604675;
+       y=8.572699427604675;*/
         GPS.getAddress(getContext(), x, y);
         Date date = new Date();
         String[] strs3 = new String[8];
@@ -81,4 +84,5 @@ public class aboutme3 extends Activity {
         listView = (ListView) findViewById(R.id.aboutmelist3);
         listView.setAdapter(adapter3);
     }
+
 }
