@@ -49,8 +49,8 @@
         <activity android:name="com.kuboche.myapplication.park"></activity>
         <activity android:name="com.kuboche.myapplication.aboutme1"></activity>
         <activity android:name="com.kuboche.myapplication.aboutme2"></activity>
-        <activity android:name="com.kuboche.myapplication.aboutme3"></activity>
         <activity android:name="com.kuboche.myapplication.map"></activity>
+        <activity android:name="com.kuboche.myapplication.change_password2_1"></activity>
 
     </application>
 

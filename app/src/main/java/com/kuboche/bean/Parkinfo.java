@@ -11,12 +11,18 @@ public class Parkinfo extends SugarRecord implements Serializable {
     private String position;
     private long charge;
     private Boolean empty;
+    private double x;
+    private double y;
+    private String phonenum;
 
-    public Parkinfo(String parkname, String position, long charge, Boolean empty) {
+    public Parkinfo(String parkname, String position, long charge, Boolean empty,double x, double y, String phonenum) {
         this.parkname = parkname;
         this.position = position;
         this.charge = charge;
         this.empty = empty;
+        this.x = x;
+        this.y = y;
+        this.phonenum = phonenum;
     }
 
     public Parkinfo() {
@@ -52,6 +58,30 @@ public class Parkinfo extends SugarRecord implements Serializable {
 
     public void setEmpty(Boolean empty) {
         this.empty = empty;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public String getPhonenum() {
+        return phonenum;
+    }
+
+    public void setPhonenum(String phonenum) {
+        this.phonenum = phonenum;
     }
 }
 

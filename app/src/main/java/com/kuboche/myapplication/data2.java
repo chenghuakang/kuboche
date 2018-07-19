@@ -23,11 +23,11 @@ public class data2 extends Activity implements AdapterView.OnItemClickListener {
     ListView listView;
 
     public void main() {
-        Parkinfo information = new Parkinfo("华大停车场", "洪山区珞喻路152号", 3, true);
+        Parkinfo information = new Parkinfo("华大停车场", "洪山区珞喻路152号", 3, true,114.12,30.335,"18171370371");
         information.save();
-        information = new Parkinfo("南湖停车场", "南湖路2号", 5, true);
+        information = new Parkinfo("南湖停车场", "南湖路2号", 5, true,114.12,81.34,"18171372219");
         information.save();
-        information = new Parkinfo("东湖景区停车场", "鲁磨路236号", 10, false);
+        information = new Parkinfo("东湖景区停车场", "鲁磨路236号", 10, false,114,82,"18171370371");
         information.save();
     }
 
@@ -59,12 +59,12 @@ public class data2 extends Activity implements AdapterView.OnItemClickListener {
         List<User> us = User.listAll(User.class);
         if (!us.isEmpty()) {
             User us1 = us.get(0);
-            Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + "13888888888"));
+            Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + p.getPhonenum()));
             //sendIntent.setPackage("com.android.mms");
             sendIntent.putExtra("sms_body", us1.getAccount() + "要在" + p.getParkname() + "停车" + ",每小时" + p.getCharge() + "元");
             startActivity(sendIntent);
         } else {
-            Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + "13888888888"));
+            Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + p.getPhonenum()));
             //sendIntent.setPackage("com.android.mms");
             sendIntent.putExtra("sms_body", "匿名人" + "要在" + p.getParkname() + "停车" + ",每小时" + p.getCharge() + "元");
             startActivity(sendIntent);
