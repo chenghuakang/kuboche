@@ -23,11 +23,27 @@ public class data2 extends Activity implements AdapterView.OnItemClickListener {
     ListView listView;
 
     public void main() {
-        Parkinfo information = new Parkinfo("华大停车场", "洪山区珞喻路152号", 3, true,114.12,30.335,"18171370371");
+        Parkinfo information = new Parkinfo("华大停车场", "洪山区珞喻路152号", 3, true, 114.3678, 30.5076, "18171370371");
         information.save();
-        information = new Parkinfo("南湖停车场", "南湖路2号", 5, true,114.12,81.34,"18171372219");
+        information = new Parkinfo("南湖停车场", "南湖路2号", 5, true, 114.3566, 30.4999, "18171372219");
         information.save();
-        information = new Parkinfo("东湖景区停车场", "鲁磨路236号", 10, false,114,82,"18171370371");
+        information = new Parkinfo("东湖景区停车场", "鲁磨路236号", 10, false, 114.3328, 30.5520, "18171370371");
+        information.save();
+        information = new Parkinfo("光谷停车场", "光谷步行街", 5, false, 114.3746, 30.5534, "15071281336");
+        information.save();
+        information = new Parkinfo("创意城停车场", "街道口银泰创意城", 5, true, 114.3668, 30.5099, "15071281336");
+        information.save();
+        information = new Parkinfo("省图书馆停车场", "武昌区公正路25号", 5, true, 114.3578, 30.4876, "15071281336");
+        information.save();
+        information = new Parkinfo("楚河汉街停车场", "武汉市武昌区公正路", 5, true, 114.3523, 30.4834, "15071281336");
+        information.save();
+        information = new Parkinfo("武汉大学信息学部停车场", "洪山区珞喻路129号", 3, true, 114.3656, 30.5677, "15071281336");
+        information.save();
+        information = new Parkinfo("武汉理工大学马房山校区停车场", "洪山区珞狮路205号", 3, true, 114.3638, 30.5624, "15071281336");
+        information.save();
+        information = new Parkinfo("华中农业大学停车场", "洪山区狮子山街1号", 3, true, 114.3642, 30.5629, "15071281336");
+        information.save();
+        information = new Parkinfo("华中科技大学停车场", "洪山区珞喻路1037号", 3, true, 114.3654, 30.5632, "15071281336");
         information.save();
     }
 

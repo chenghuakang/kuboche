@@ -16,11 +16,25 @@ public class pandora2 extends Activity {
     ListView listView;
 
     public void main() {
-        pandora2DS carService = new pandora2DS("天行汽车美容中心", "武汉市洪山区珞喻路152号", 708.00, "18171370371", 40.2343, 50.1234);
+        pandora2DS carService = new pandora2DS("天行汽车美容中心", "武汉市洪山区珞喻路", 708.00, "18171370371", 114.3680, 30.5077);
         carService.save();
-        carService = new pandora2DS("向创汽车服务中心", "武汉市武昌区", 800, "18171372219", 44.2333, 50.1111);
+        carService = new pandora2DS("向创汽车服务中心", "武汉市武昌区", 800, "18171372219", 114.3682, 30.5078);
         carService.save();
-        carService = new pandora2DS("申通汽车服务中心", "河南信阳市", 900, "18171372210", 44.2266, 50.1411);
+        carService = new pandora2DS("申通汽车服务中心", "武汉市洪山区", 900, "18171372210", 114.3683, 30.5077);
+        carService.save();
+        carService = new pandora2DS("天下汽车服务","武汉市桂中路",781.2,"18171311234",114.3678,30.5076);
+        carService.save();
+        carService = new pandora2DS("韵达汽车服务中心","武汉市珞喻路",771.0,"18171318834",114.3679,30.5070);
+        carService.save();
+        carService = new pandora2DS("奇山汽修","武汉市珞南街道",677.0,"18171313333",114.3666,30.5066);
+        carService.save();
+        carService = new pandora2DS("武昌汽车服务","武汉市洪山区",999,"18171315678",114.3600,30.5076);
+        carService.save();
+        carService = new pandora2DS("中通汽车服务中心","武汉市桂中路",666,"18171311234",114.3670,30.5076);
+        carService.save();
+        carService = new pandora2DS("百世汽车服务中心","武汉市桂中路",886,"18122293800",114.3677,30.5000);
+        carService.save();
+        carService = new pandora2DS("红山汽车服务中心","武汉市狮子街",666,"18171311334",114.3670,30.5076);
         carService.save();
     }
 
