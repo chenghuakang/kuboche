@@ -32,10 +32,10 @@ public class aboutme3{
     private static final String TAG = "GpsActivity";
     private LocationManager locationManager;
     private Context mContext;
-    double x;
-    double y;
+    public double x;
+    public double y;
     private Context context;
-    AMapLocation a;
+    public AMapLocation a;
     ArrayAdapter<String> adapter3;
    // final AMapLocationClient mLocationClient=null;
 
