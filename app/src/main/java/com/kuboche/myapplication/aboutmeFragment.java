@@ -42,7 +42,7 @@ public class aboutmeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setClass(getActivity(), aboutme3.class);
+                intent.setClass(getActivity(), map.class);
                 startActivity(intent);
             }
         });

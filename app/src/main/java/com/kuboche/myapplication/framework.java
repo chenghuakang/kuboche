@@ -37,7 +37,7 @@ public class framework extends AppCompatActivity implements park.parkable{
         b1 = (Button) findViewById(R.id.fragment1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.framework);
-        park1(b1);
+        loan(b1);
     }
 
     public void pandora(View v) {

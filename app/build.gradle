@@ -13,13 +13,19 @@ android {
     defaultConfig {
         applicationId "com.kuboche.kuboche"
         minSdkVersion 23
-        targetSdkVersion 28
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
        /* jackOptions{
             enabled=true;
         }*/
+        multiDexEnabled true
+    }
+    sourceSets{
+        main{
+            jniLibs.srcDirs=['libs']
+        }
     }
     buildTypes {
         release {
@@ -28,6 +34,7 @@ android {
             pseudoLocalesEnabled true
             proguardFile 'C:/Android/password.jks'
             signingConfig signingConfigs.config
+            debuggable true
         }
     }
     compileOptions{
@@ -44,4 +51,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    api 'com.amap.api:map2d:latest.integration'
+    api 'com.amap.api:search:latest.integration'
+    api 'com.amap.api:location:latest.integration'
+    implementation files('libs/Android_Map3D_SDK_V6.3.0_20180619.jar')
+}
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    }
 }
