@@ -27,7 +27,7 @@ import java.util.List;
 
 import static com.orm.util.ContextUtil.getContext;
 
-public class aboutme3{
+public class aboutme3 {
     ListView listView;
     private static final String TAG = "GpsActivity";
     private LocationManager locationManager;
@@ -37,7 +37,7 @@ public class aboutme3{
     private Context context;
     public AMapLocation a;
     ArrayAdapter<String> adapter3;
-   // final AMapLocationClient mLocationClient=null;
+    // final AMapLocationClient mLocationClient=null;
 
     //声明定位回调监听器
     public void locate() {
@@ -49,17 +49,17 @@ public class aboutme3{
         AMapLocationListener mLocationListener = new AMapLocationListener() {
             @Override
             public void onLocationChanged(AMapLocation amapLocation) {
-                if (amapLocation != null){
+                if (amapLocation != null) {
                     if (amapLocation.getErrorCode() == 0) {
-                        a=amapLocation;
-                        x=a.getAltitude();
-                        y=a.getLongitude();
+                        a = amapLocation;
+                        x = a.getAltitude();
+                        y = a.getLongitude();
                         mLocationClient.stopLocation();
                     } else {
                         Log.e("AmapError", "location Error, ErrCode:"
                                 + amapLocation.getErrorCode() + ", errInfo:"
                                 + amapLocation.getErrorInfo());
-                        Toast.makeText(getContext(), "定位失败"+amapLocation.getErrorCode(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getContext(), "定位失败" + amapLocation.getErrorCode(), Toast.LENGTH_LONG).show();
                     }
                 } else {
                     Toast.makeText(getContext(), "定位失败", Toast.LENGTH_LONG).show();

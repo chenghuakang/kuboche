@@ -37,11 +37,21 @@ public class data2 extends Activity implements AdapterView.OnItemClickListener {
         setContentView(R.layout.data2);
         main();
         List<Parkinfo> parkS = Parkinfo.listAll(Parkinfo.class);
+        List<Parkinfo> parkDes1 = new ArrayList<Parkinfo>();
         List<Parkinfo> parkDes = new ArrayList<Parkinfo>();
         for (int i = 0; i < parkS.size(); i++) {
             Boolean flagK = parkS.get(i).getEmpty();
             if (flagK = true)
-                parkDes.add(parkS.get(i));
+                parkDes1.add(parkS.get(i));
+        }
+
+        double desX = 44.112;
+        double desY = 50.111;//传进来的位置
+        //搜索相关地理位置，扔进新的列表中
+        for (int i = 0; i < parkDes1.size(); i++) {
+            if (calculateDistance.main(desX, desY, parkDes1.get(i).getX(), parkDes1.get(i).getY()) <= 5000) {
+                parkDes.add(parkDes.get(i));
+            }
         }
 
         String[] printinfo = new String[parkDes.size()];

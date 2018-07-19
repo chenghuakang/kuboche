@@ -33,10 +33,9 @@ public class aboutmeFragment extends Fragment {
         SharedPreferences preferences = getSharedPreferences("user", Context.MODE_PRIVATE);
         String account = preferences.getString("data", "defaultname");
         List<User> userList = User.find(User.class, "account=?", account);
-        String nickname=userList.get(0).getNickname();
+        String nickname = userList.get(0).getNickname();
         TextView textView1 = (TextView) view.findViewById(tv1);
-        textView1.setText(nickname+"\n"+account);
-
+        textView1.setText(nickname + "\n" + account);
 
 
         //List<User> us = User.listAll(User.class);

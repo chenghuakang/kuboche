@@ -15,7 +15,7 @@ public class Parkinfo extends SugarRecord implements Serializable {
     private double y;
     private String phonenum;
 
-    public Parkinfo(String parkname, String position, long charge, Boolean empty,double x, double y, String phonenum) {
+    public Parkinfo(String parkname, String position, long charge, Boolean empty, double x, double y, String phonenum) {
         this.parkname = parkname;
         this.position = position;
         this.charge = charge;
