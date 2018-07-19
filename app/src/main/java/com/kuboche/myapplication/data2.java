@@ -60,9 +60,10 @@ public class data2 extends Activity implements AdapterView.OnItemClickListener {
             if (flagK = true)
                 parkDes1.add(parkS.get(i));
         }
-
-        double desX = 44.112;
-        double desY = 50.111;//传进来的位置
+        aboutme3 a = new aboutme3();
+        a.locate();
+        double desX = a.x;
+        double desY = a.y;//传进来的位置
         //搜索相关地理位置，扔进新的列表中
         for (int i = 0; i < parkDes1.size(); i++) {
             if (calculateDistance.main(desX, desY, parkDes1.get(i).getX(), parkDes1.get(i).getY()) <= 5000) {

@@ -52,8 +52,8 @@ public class aboutme3 {
                 if (amapLocation != null) {
                     if (amapLocation.getErrorCode() == 0) {
                         a = amapLocation;
-                        x = a.getAltitude();
-                        y = a.getLongitude();
+                        x = a.getLongitude();
+                        y = a.getLatitude();
                         mLocationClient.stopLocation();
                     } else {
                         Log.e("AmapError", "location Error, ErrCode:"

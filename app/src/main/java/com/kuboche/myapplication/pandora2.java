@@ -63,12 +63,10 @@ public class pandora2 extends Activity {
             str2[i] = "名称：" + carDes.get(i).getName() + "   人均消费：" + carDes.get(i).getAverageCost()
                     + "\n位置：" + carDes.get(i).getLocation() + "\n联系方式：" + carDes.get(i).getContactWay();
         }
-        //String[] str2 = {"dsa\ndsa\ndsa\ndsa\n","dsa\ndsa\ndsa\ndsa\n","dsa\ndsa\ndsa\ndsa\n","dsa\ndsa\ndsa\ndsa\n"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_expandable_list_item_1, str2);
         listView = (ListView) findViewById(R.id.pan2_listview);
         listView.setAdapter(adapter);
-
     }
 }
 

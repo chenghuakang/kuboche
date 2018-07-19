@@ -63,4 +63,11 @@
     <string name="aboutme_bt3">My Locate</string>
     <string name="aboutme_bt4">Change Record</string>
     <string name="aboutme_bt5">Logout</string>
+    <string name="park">stop</string>
+    <string name="year">year</string>
+    <string name="month">month</string>
+    <string name="day">day</string>
+    <string name="hour">hour</string>
+    <string name="minute">minute</string>
+    <string name="number">second</string>
 </resources>
