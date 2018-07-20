@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        style="@style/longButton"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="停车场预约"
+        android:textColor="#ffffff" />
+        <TextView
+            android:id="@+id/park"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Button
+            android:id="@+id/book"
+            style="@style/centerLongButton"
+            android:background="@drawable/btn_common"
+            android:layout_marginTop="32dp"
+            android:textStyle="bold"
+            android:text="我要预约"
+            android:onClick="bu1"/>
+
+</LinearLayout>

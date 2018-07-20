@@ -19,14 +19,14 @@ public class aboutme2 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aboutme2);
 
-        PackRecord p = new PackRecord("49", "njnsajdk", 6.646, new Date());
+        /*PackRecord p = new PackRecord("49", "njnsajdk", 6.646, new Date());
         p.save();
         p = new PackRecord("55", "FASHUIk", 8.136, new Date());
         p.save();
         p = new PackRecord("79", "FASHUIk", 8.136, new Date());
         p.save();
         p = new PackRecord("321", "FASHUIk", 8.136, new Date());
-        p.save();
+        p.save();*/
         List<PackRecord> p2 = PackRecord.listAll(PackRecord.class);
         String[] strs2 = new String[p2.size()];
         for (int j = 0; j < p2.size(); j++) {

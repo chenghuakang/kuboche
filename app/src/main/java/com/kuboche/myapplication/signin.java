@@ -71,7 +71,7 @@ public class signin extends Activity {
                     } else if (securityAnswer.equals("")) {//判断密保答案是否已设置
                         Toast.makeText(this, "请设置密保答案！", Toast.LENGTH_LONG).show();
                     } else {//信息全部填对时则注册
-                        User U1 = new User(account, null, pwd1, securityQuestion, securityAnswer,false);
+                        User U1 = new User(account, "酷泊车用户", pwd1, securityQuestion, securityAnswer,false);
                         U1.save();
                         SharedPreferences preferences = getSharedPreferences("user", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = preferences.edit();

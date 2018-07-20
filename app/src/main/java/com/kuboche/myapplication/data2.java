@@ -57,17 +57,17 @@ public class data2 extends Activity implements AdapterView.OnItemClickListener {
         List<Parkinfo> parkDes = new ArrayList<Parkinfo>();
         for (int i = 0; i < parkS.size(); i++) {
             Boolean flagK = parkS.get(i).getEmpty();
-            if (flagK = true)
+            if (flagK == true)
                 parkDes1.add(parkS.get(i));
         }
-        aboutme3 a = new aboutme3();
-        a.locate();
-        double desX = a.x;
-        double desY = a.y;//传进来的位置
+        //aboutme3 a = new aboutme3();
+        //a.locate();
+        double desX = 114.3644;
+        double desY = 30.5534;//传进来的位置
         //搜索相关地理位置，扔进新的列表中
         for (int i = 0; i < parkDes1.size(); i++) {
             if (calculateDistance.main(desX, desY, parkDes1.get(i).getX(), parkDes1.get(i).getY()) <= 5000) {
-                parkDes.add(parkDes.get(i));
+                parkDes.add(parkDes1.get(i));
             }
         }
 
@@ -82,7 +82,7 @@ public class data2 extends Activity implements AdapterView.OnItemClickListener {
     }
 
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Parkinfo p = PackRecord.findById(Parkinfo.class, (int) (l + 1));
+        /*Parkinfo p = PackRecord.findById(Parkinfo.class, (int) (l + 1));
         List<User> us = User.listAll(User.class);
         if (!us.isEmpty()) {
             User us1 = us.get(0);
@@ -95,7 +95,19 @@ public class data2 extends Activity implements AdapterView.OnItemClickListener {
             //sendIntent.setPackage("com.android.mms");
             sendIntent.putExtra("sms_body", "匿名人" + "要在" + p.getParkname() + "停车" + ",每小时" + p.getCharge() + "元");
             startActivity(sendIntent);
-        }
+        }*/
+
+        Parkinfo p = PackRecord.findById(Parkinfo.class, (int) (l + 1));
+        String parkinfo = "名字："+ p.getParkname() +"\n位置："+p.getPosition()+"\n收费标准："+p.getCharge()+"元/小时"+"\n联系方式："+p.getPhonenum();
+        Bundle bundle = new Bundle();
+        bundle.putString("parkinfo",parkinfo);
+        bundle.putString("name",p.getParkname());
+        bundle.putString("phonenum",p.getPhonenum());
+        bundle.putFloat("price",p.getCharge());
+        Intent intent = new Intent();
+        intent.putExtras(bundle);
+        intent.setClass(data2.this, data3.class);
+        startActivity(intent);
 
     }
 

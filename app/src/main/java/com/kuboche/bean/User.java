@@ -74,5 +74,6 @@ public class User extends SugarRecord implements Serializable {
     public void setParking(boolean parking) {
         this.parking = parking;
     }
+
 }
 

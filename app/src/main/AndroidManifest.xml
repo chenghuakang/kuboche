@@ -46,7 +46,7 @@
         <activity android:name="com.kuboche.myapplication.pandora2"></activity>
         <activity android:name="com.kuboche.myapplication.pandora3"></activity>
         <activity android:name="com.kuboche.myapplication.data2"></activity>
-        <activity android:name="com.kuboche.myapplication.park"></activity>
+        <activity android:name="com.kuboche.myapplication.data3"></activity>
         <activity android:name="com.kuboche.myapplication.aboutme1"></activity>
         <activity android:name="com.kuboche.myapplication.aboutme2"></activity>
         <activity android:name="com.kuboche.myapplication.map"></activity>

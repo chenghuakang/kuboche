@@ -47,10 +47,10 @@ public class pandora2 extends Activity {
         //List<pandora2DS> carDes = pandora2DS.listAll(pandora2DS.class);
         List<pandora2DS> carS = pandora2DS.listAll(pandora2DS.class);
         List<pandora2DS> carDes = new ArrayList<pandora2DS>();
-        aboutme3 a = new aboutme3();
-        a.locate();
-        double desX = a.x;
-        double desY = a.y;//传进来的位置
+       // aboutme3 a = new aboutme3();
+        //a.locate();
+        double desX = 114.3670;
+        double desY = 30.5076;//传进来的位置
         //搜索相关地理位置，扔进新的列表中
         for (int i = 0; i < carS.size(); i++) {
             if (calculateDistance.main(desX, desY, carS.get(i).getX(), carS.get(i).getY()) <= 5000) {

@@ -31,6 +31,7 @@ public class framework extends AppCompatActivity implements park.parkable{
     Button b3;
     ListView listView;
     ArrayAdapter<String> adapter;
+    boolean isParking = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,8 @@ public class framework extends AppCompatActivity implements park.parkable{
     }
 
     public void loan(View v) {
+        User u = User.findById(User.class,1);
+        if(!u.isParking()){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         if (f2 == null) {
@@ -62,6 +65,10 @@ public class framework extends AppCompatActivity implements park.parkable{
         hideFragment(transaction);
         transaction.show(f2);
         transaction.commit();
+        }else {
+            park1(b1);
+        }
+
     }
 
     public void about_me(View v) {
@@ -104,6 +111,9 @@ public class framework extends AppCompatActivity implements park.parkable{
     }
     @Override
     public void parkCallBack(){
+        User u = User.findById(User.class,1);
+        u.setParking(false);
+        u.save();
         loan(b1);
     }
 
